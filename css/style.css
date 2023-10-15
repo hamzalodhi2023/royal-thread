@@ -1,0 +1,222 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --blue: #03a4ed;
+  --orange: #ff695f;
+  --light-orange: #ff8b67;
+  --gray: #2a2a2a;
+  --white: #ffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+/***********************************************
+GOOGLE FONTS START
+***********************************************/
+
+@font-face {
+  font-family: Poppins;
+  src: url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+}
+
+/***********************************************
+    GOOGLE FONTS END
+***********************************************/
+
+/***********************************************
+    NAV START
+***********************************************/
+nav {
+  /* border: 1px solid #000; */
+  width: 100%;
+  height: 120px;
+  background-color: #fcf3f3;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 99;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav-left {
+  /* border: 1px solid #000; */
+  width: 20%;
+  height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  /* border: 1px solid #000; */
+  width: 4.5vw;
+}
+
+.nav-right {
+  /* border: 1px solid #000; */
+  width: 80%;
+  height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-right ul {
+  /* border: 1px solid #000; */
+  width: 60%;
+  height: 100%;
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nav-right ul a {
+  /* border: 1px solid #000; */
+  color: var(--gray);
+  padding: 10px 0px;
+  font-weight: 500;
+  font-size: 1.3vw;
+  border-radius: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.nav-right ul a:hover {
+  color: var(--light-orange);
+}
+
+.nav-right ul .active {
+  color: var(--light-orange);
+  position: relative;
+}
+
+.nav-right ul .active::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 70%;
+  height: 2px;
+  background-color: var(--light-orange);
+}
+
+.nav-right .button {
+  background-color: var(--orange);
+  font-size: 1.2vw;
+  padding: 10px 30px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.nav-right .button:hover {
+  background-color: var(--blue);
+}
+
+/***********************************************
+    NAV END
+***********************************************/
+
+/***********************************************
+    HEADER SECTION START
+***********************************************/
+
+#header {
+  /* border: 1px solid #000; */
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#header h1 {
+  /* border: 1px solid #000; */
+  font-size: 2.5vw;
+  margin-left: 16%;
+  margin-top: 20%;
+  color: var(--orange);
+}
+
+#header p {
+  /* border: 1px solid #000; */
+  font-size: 1.5vw;
+  font-weight: 500;
+  margin-left: 16%;
+  color: var(--gray);
+  padding: 10px 0px;
+}
+
+#header .button {
+  background-color: var(--orange);
+  font-size: 1.2vw;
+  padding: 10px 30px;
+  outline: none;
+  border: none;
+  margin-left: 16%;
+  margin-top: 2%;
+  border-radius: 20px;
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#header .button:hover {
+  background-color: var(--blue);
+}
+
+#header::after {
+  content: "";
+  /* border: 1px solid #000; */
+  position: absolute;
+  left: 0px;
+  top: 120px;
+  width: 40vw;
+  height: 500px;
+  z-index: -10;
+
+  background-image: url(../images/baner-dec-left.png);
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#header::before {
+  content: "";
+  /* border: 1px solid #000; */
+  position: absolute;
+  right: 0px;
+  top: 120px;
+  width: 50vw;
+  height: 500px;
+  z-index: -10;
+
+  background-image: url(../images/header-right-clip.png);
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/***********************************************
+    HEADER SECTION START
+************************************************/
