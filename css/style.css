@@ -5,6 +5,11 @@
   font-family: "Poppins", sans-serif;
 }
 
+::selection {
+  background-color: #ff695f;
+  color: white;
+}
+
 :root {
   --blue: #03a4ed;
   --orange: #ff695f;
@@ -16,19 +21,6 @@
 a {
   text-decoration: none;
 }
-
-/***********************************************
-GOOGLE FONTS START
-***********************************************/
-
-@font-face {
-  font-family: Poppins;
-  src: url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-}
-
-/***********************************************
-    GOOGLE FONTS END
-***********************************************/
 
 /***********************************************
     NAV START
@@ -63,6 +55,7 @@ nav {
 .logo {
   /* border: 1px solid #000; */
   width: 4.5vw;
+  margin-left: 34%;
 }
 
 .nav-right {
@@ -155,7 +148,16 @@ nav {
 
 #header h1 {
   /* border: 1px solid #000; */
-  font-size: 2.5vw;
+  font-size: 4vw;
+  margin-left: 16%;
+  /* margin-top: 20%; */
+  color: var(--orange);
+}
+
+#header h3 {
+  /* border: 1px solid #000; */
+  padding-top: 20px;
+  font-size: 2vw;
   margin-left: 16%;
   /* margin-top: 20%; */
   color: var(--orange);
@@ -163,7 +165,7 @@ nav {
 
 #header p {
   /* border: 1px solid #000; */
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   font-weight: 500;
   margin-left: 16%;
   color: var(--gray);
@@ -363,4 +365,77 @@ nav {
 
 /***********************************************
     SHOP SECTION END
+***********************************************/
+
+/***********************************************
+    ABOUT US SECTION START
+***********************************************/
+
+#about {
+  /* border: 1px solid #000; */
+  width: 100%;
+  height: 100%;
+  padding: 20px 50px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#about::after {
+  /* border: 1px solid #000; */
+  content: "";
+  background-image: url(../images/about-us-left.png);
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 50%;
+  height: 100%;
+}
+
+#about::before {
+  /* border: 1px solid #000; */
+  content: "";
+  background-image: url(../images/about-us-right.png);
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 50%;
+  height: 100%;
+}
+
+#about h1 {
+  /* border: 1px solid #000; */
+  padding: 50px 0px;
+  text-align: center;
+  font-size: 3vw;
+  color: var(--orange);
+}
+
+#about h3 {
+  /* border: 1px solid #000; */
+  padding-top: 50px;
+  text-align: center;
+  font-size: 2vw;
+  color: var(--orange);
+}
+
+#about p {
+  /* border: 1px solid #000; */
+  font-weight: 200;
+  font-size: 15px;
+  width: 1000px;
+  text-align: justify;
+  text-align-last: center;
+}
+/***********************************************
+    ABOUT US SECTION END
 ***********************************************/
