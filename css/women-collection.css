@@ -1,0 +1,227 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+::selection {
+  background-color: #ff695f;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #ff8a677e;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ff8a677e;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--orange);
+  border-radius: 50px;
+}
+
+:root {
+  --blue: #03a4ed;
+  --orange: #ff695f;
+  --light-orange: #ff8b67;
+  --gray: #2a2a2a;
+  --white: #ffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+/***********************************************
+    NAV START
+***********************************************/
+nav {
+  /* border: 1px solid #000; */
+  background-color: white;
+  box-shadow: 0px 0px 10px 0.5px rgb(207, 207, 207);
+  width: 100%;
+  height: 120px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav-left {
+  /* border: 1px solid #000; */
+  width: 20%;
+  height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  /* border: 1px solid #000; */
+  width: 4.5vw;
+  margin-left: 34%;
+}
+
+.nav-right {
+  /* border: 1px solid #000; */
+  width: 80%;
+  height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-right ul {
+  /* border: 1px solid #000; */
+  width: 60%;
+  height: 100%;
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nav-right ul a {
+  /* border: 1px solid #000; */
+  color: var(--gray);
+  padding: 10px 0px;
+  font-weight: 500;
+  font-size: 1.3vw;
+  border-radius: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.nav-right ul a:hover {
+  color: var(--light-orange);
+}
+
+.nav-right ul .active {
+  color: var(--light-orange);
+  position: relative;
+}
+
+.nav-right ul .active::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 70%;
+  height: 2px;
+  background-color: var(--light-orange);
+}
+
+.nav-right .button {
+  background-color: var(--orange);
+  font-size: 1.2vw;
+  padding: 10px 30px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.nav-right .button:hover {
+  background-color: var(--blue);
+}
+
+/***********************************************
+    NAV END
+***********************************************/
+
+/***********************************************
+    PRODUCT SECTION START
+***********************************************/
+
+#products-section {
+  border: 1px solid #000;
+  height: 100vh;
+  width: 100%;
+  padding-top: 9%;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#filter {
+  /* border: 1px solid #000; */
+  width: 20%;
+  height: 100%;
+  overflow-y: scroll;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+#filter h1 {
+  font-size: 3vw;
+  font-weight: 500;
+  color: var(--orange);
+}
+
+#filter .filter-box {
+  /* border: 1px solid #000; */
+  width: 100%;
+  height: 100%;
+  padding-left: 5px;
+}
+
+.filter-box h4 {
+  font-size: 1.5vw;
+  font-weight: 500;
+  color: var(--orange);
+}
+
+.checkbox-div {
+  /* border: 1px solid #000; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.checkbox-div input {
+  margin: 0px 20px;
+  user-select: none;
+}
+
+.checkbox-div label {
+  color: var(--gray);
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-div input:checked {
+  accent-color: var(--orange);
+
+  user-select: none;
+}
+
+.checkbox-div input:checked ~ label {
+  color: var(--orange);
+  user-select: none;
+}
+/***********************************************
+    PRODUCT SECTION END
+***********************************************/
