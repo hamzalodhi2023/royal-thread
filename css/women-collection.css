@@ -150,7 +150,7 @@ nav {
 ***********************************************/
 
 #products-section {
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   height: 100vh;
   width: 100%;
   padding-top: 9%;
@@ -224,10 +224,11 @@ nav {
 }
 
 .collection-div {
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   width: 80%;
   height: 100%;
   overflow-y: scroll;
+  padding-top: 30px;
 
   display: flex;
   align-items: center;
@@ -236,9 +237,116 @@ nav {
 }
 
 .collection-div .card {
-  border: 1px solid #000;
+  /* border: 1px solid var(--blue); */
   width: 480px;
   height: 360px;
+  box-shadow: 0px 0px 10px 2px gray;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.card .card-left {
+  /* border: 1px solid #000; */
+  width: 50%;
+  height: 100%;
+}
+
+.card .card-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .card-right {
+  /* border: 1px solid #000; */
+  width: 50%;
+  height: 100%;
+  background-color: var(--blue);
+}
+
+.card .card-right h3 {
+  text-align: center;
+  font-weight: 500;
+  color: white;
+  padding: 10px;
+}
+
+.card .card-right div {
+  /* border: 1px solid #000; */
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card .card-right div span {
+  /* border: 1px solid #000; */
+  color: white;
+}
+
+.card-right div span select {
+  /* border: 1px solid #000; */
+  outline: orange;
+  border: none;
+  border-radius: none;
+  background-color: white;
+  padding: 5px;
+  width: 100px;
+  font-size: 14px;
+}
+
+.card-right #order-btn-div {
+  /* border: 1px solid #000; */
+  width: 100%;
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#order-btn-div button {
+  background-color: var(--orange);
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+#order-btn-div button:hover {
+  /* border: 1px solid #000; */
+  background-color: var(--blue);
+  box-shadow: 0px 0px 5px 1px rgb(0, 0, 0);
+}
+
+#photo-change-btn {
+  /* border: 1px solid #000; */
+  width: 100%;
+  padding: 0px 20px;
+}
+
+#photo-change-btn a {
+  /* border: 1px solid #000; */
+  font-size: 25px;
+  width: 50px;
+  background-color: var(--orange);
+  border-radius: 10px;
+  color: white;
+  transition: 0.6s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#photo-change-btn a:hover {
+  background-color: var(--blue);
+  box-shadow: 0px 0px 5px 1px rgb(0, 0, 0);
 }
 
 /***********************************************
