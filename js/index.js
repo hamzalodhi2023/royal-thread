@@ -47,8 +47,6 @@ comments.addEventListener("click", function(){
     }
 })
 
-let typingSound = new Audio("typing.mp3");
-let typingSoundPlaying = typingSound.play();
 let textP = document.querySelector(".typing");
 let text = "Elevate Your Style: Where Fashion Meets Passion.";
 let index = 1;
@@ -57,7 +55,7 @@ let typeWriter = () => {
     let slice = text.slice(0,index);
     
     textP.innerText = slice;
-    index++;
+    index > text.length ? index = 1 : index++;
 
     setTimeout(function(){
         typeWriter();
