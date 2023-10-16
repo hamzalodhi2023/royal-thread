@@ -170,15 +170,16 @@ nav {
   overflow-y: scroll;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
 }
 
 #filter h1 {
-  font-size: 3vw;
+  font-size: 2vw;
   font-weight: 500;
   color: var(--orange);
+  padding-left: 5px;
 }
 
 #filter .filter-box {
@@ -237,12 +238,16 @@ nav {
 }
 
 .collection-div .card {
-  /* border: 1px solid var(--blue); */
+  border: 1px solid var(--orange);
   width: 480px;
   height: 360px;
-  box-shadow: 0px 0px 10px 2px gray;
   display: flex;
   margin-bottom: 30px;
+  transition: 0.6s;
+}
+
+.collection-div .card:hover {
+  box-shadow: 0px 0px 10px 1px gray;
 }
 
 .card .card-left {
@@ -261,21 +266,20 @@ nav {
   /* border: 1px solid #000; */
   width: 50%;
   height: 100%;
-  background-color: var(--blue);
+  position: relative;
 }
 
 .card .card-right h3 {
   text-align: center;
   font-weight: 500;
-  color: white;
+  color: var(--orange);
   padding: 10px;
 }
 
 .card .card-right div {
   /* border: 1px solid #000; */
   width: 100%;
-  padding: 5px;
-  font-size: 14px;
+  padding: 5px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -283,7 +287,8 @@ nav {
 
 .card .card-right div span {
   /* border: 1px solid #000; */
-  color: white;
+  color: var(--gray);
+  font-size: 12px;
 }
 
 .card-right div span select {
@@ -293,49 +298,47 @@ nav {
   border-radius: none;
   background-color: white;
   padding: 5px;
-  width: 100px;
-  font-size: 14px;
-}
-
-.card-right #order-btn-div {
-  /* border: 1px solid #000; */
-  width: 100%;
-  padding: 10px;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-#order-btn-div button {
-  background-color: var(--orange);
-  border: none;
-  outline: none;
-  padding: 5px 10px;
-  border-radius: 50px;
-  color: white;
-  cursor: pointer;
-  transition: 0.6s;
-}
-
-#order-btn-div button:hover {
-  /* border: 1px solid #000; */
-  background-color: var(--blue);
-  box-shadow: 0px 0px 5px 1px rgb(0, 0, 0);
+  width: 80px;
+  font-size: 12px;
 }
 
 #photo-change-btn {
   /* border: 1px solid #000; */
   width: 100%;
-  padding: 0px 20px;
+  padding: 15px 20px;
 }
 
 #photo-change-btn a {
   /* border: 1px solid #000; */
   font-size: 25px;
   width: 50px;
-  background-color: var(--orange);
   border-radius: 10px;
+  color: var(--orange);
+  transition: 0.6s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#add-cart-btn {
+  /* border: 1px solid #000; */
+  width: 100%;
+  height: 40px;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#add-cart-btn a {
+  /* border: 1px solid #000; */
+  background-color: var(--light-orange);
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 12px;
   color: white;
   transition: 0.6s;
 
@@ -344,9 +347,9 @@ nav {
   justify-content: center;
 }
 
-#photo-change-btn a:hover {
-  background-color: var(--blue);
-  box-shadow: 0px 0px 5px 1px rgb(0, 0, 0);
+#add-cart-btn:hover a {
+  /* border: 1px solid #000; */
+  background-color: var(--orange);
 }
 
 /***********************************************
