@@ -46,3 +46,23 @@ comments.addEventListener("click", function(){
         this.className = "comments active"; 
     }
 })
+
+let typingSound = new Audio("typing.mp3");
+let typingSoundPlaying = typingSound.play();
+let textP = document.querySelector(".typing");
+let text = "Elevate Your Style: Where Fashion Meets Passion.";
+let index = 1;
+
+let typeWriter = () => {
+    let slice = text.slice(0,index);
+    
+    textP.innerText = slice;
+    index++;
+
+    setTimeout(function(){
+        typeWriter();
+    },100);
+}
+typeWriter();
+
+
