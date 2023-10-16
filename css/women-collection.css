@@ -275,6 +275,7 @@ nav {
   /* border: 1px solid #000; */
   width: 100%;
   padding: 5px;
+  font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -292,6 +293,8 @@ nav {
   border-radius: none;
   background-color: white;
   padding: 5px;
+  width: 100px;
+  font-size: 14px;
 }
 
 .card-right #order-btn-div {
@@ -308,7 +311,7 @@ nav {
   background-color: var(--orange);
   border: none;
   outline: none;
-  padding: 10px 20px;
+  padding: 5px 10px;
   border-radius: 50px;
   color: white;
   cursor: pointer;
@@ -317,6 +320,31 @@ nav {
 
 #order-btn-div button:hover {
   /* border: 1px solid #000; */
+  background-color: var(--blue);
+  box-shadow: 0px 0px 5px 1px rgb(0, 0, 0);
+}
+
+#photo-change-btn {
+  /* border: 1px solid #000; */
+  width: 100%;
+  padding: 0px 20px;
+}
+
+#photo-change-btn a {
+  /* border: 1px solid #000; */
+  font-size: 25px;
+  width: 50px;
+  background-color: var(--orange);
+  border-radius: 10px;
+  color: white;
+  transition: 0.6s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#photo-change-btn a:hover {
   background-color: var(--blue);
   box-shadow: 0px 0px 5px 1px rgb(0, 0, 0);
 }
