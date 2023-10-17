@@ -38,6 +38,10 @@ a {
   text-decoration: none;
 }
 
+body{
+  overflow: hidden;
+}
+
 /***********************************************
     NAV START
 ***********************************************/
@@ -106,9 +110,28 @@ nav {
   cursor: pointer;
 }
 
+
+.nav-right ul > li > i {
+  /* border: 1px solid #000; */
+  color: var(--gray);
+  padding: 10px 0px;
+  font-size: 1.3vw;
+  border-radius: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+
 .nav-right ul a:hover {
   color: var(--light-orange);
 }
+
+
+
+.nav-right ul > li > i:hover {
+  color: var(--light-orange);
+}
+
 
 .nav-right ul .active {
   color: var(--light-orange);
@@ -354,4 +377,34 @@ nav {
 
 /***********************************************
     PRODUCT SECTION END
+***********************************************/
+
+/***********************************************
+    CART SECTION START
+***********************************************/
+.cart-container{
+  /* border: 1px solid #000; */
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  left: 100%;
+  z-index: 1;
+  transition: 0.7s;
+}
+
+.fa-regular{
+  /* border: 1px solid #000; */
+  font-size: 30px;
+  color: chocolate;
+  position: absolute;
+  right: 3%;
+  top: 5%;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+
+/***********************************************
+    CART SECTION END
 ***********************************************/
