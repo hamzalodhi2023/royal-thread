@@ -38,7 +38,7 @@ a {
   text-decoration: none;
 }
 
-body{
+body {
   overflow: hidden;
 }
 
@@ -110,7 +110,6 @@ nav {
   cursor: pointer;
 }
 
-
 .nav-right ul > li > i {
   /* border: 1px solid #000; */
   color: var(--gray);
@@ -121,17 +120,13 @@ nav {
   cursor: pointer;
 }
 
-
 .nav-right ul a:hover {
   color: var(--light-orange);
 }
 
-
-
 .nav-right ul > li > i:hover {
   color: var(--light-orange);
 }
-
 
 .nav-right ul .active {
   color: var(--light-orange);
@@ -383,7 +378,7 @@ nav {
 /***********************************************
     CART SECTION START
 ***********************************************/
-.cart-container{
+.cart-container {
   /* border: 1px solid #000; */
   width: 100vw;
   height: 100vh;
@@ -394,17 +389,100 @@ nav {
   transition: 0.7s;
 }
 
-.fa-regular{
+.fa-regular {
   /* border: 1px solid #000; */
-  font-size: 30px;
-  color: chocolate;
+  font-size: 2.5vw;
+  color: white;
   position: absolute;
   right: 3%;
-  top: 5%;
+  top: 2.5%;
   cursor: pointer;
   pointer-events: all;
 }
 
+.cart-container h1 {
+  /* border: 1px solid #000; */
+  background-color: var(--light-orange);
+  font-size: 3vw;
+  font-weight: 500;
+  padding-left: 10%;
+  color: white;
+  height: 10%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.cart-container .cart-main-div {
+  /* border: 1px solid #000; */
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.cart-main-div .cart-header {
+  /* border: 1px solid #000; */
+  background-color: var(--light-orange);
+  width: 80%;
+  height: 40px;
+  margin-top: 2%;
+
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.cart-header div {
+  /* border: 1px solid #000; */
+  width: calc(100% / 6);
+  font-size: 1.5vw;
+  font-weight: 300;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-main-div .cart {
+  /* border: 1px solid #000; */
+  /* border-bottom: 1px solid rgb(170, 170, 170); */
+  width: 80%;
+  height: 70px;
+  margin-top: 1%;
+
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.cart-main-div .cart div {
+  /* border: 1px solid #000; */
+  width: calc(100% / 6);
+  font-size: 1.1vw;
+  font-weight: 300;
+  color: var(--gray);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-main-div .cart div i {
+  cursor: pointer;
+  color: var(--gray);
+}
+
+.cart-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
 /***********************************************
     CART SECTION END
