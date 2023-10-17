@@ -1,0 +1,489 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+::selection {
+  background-color: #ff695f;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #ff8a677e;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ff8a677e;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--orange);
+  border-radius: 50px;
+}
+
+:root {
+  --blue: #03a4ed;
+  --orange: #ff695f;
+  --light-orange: #ff8b67;
+  --gray: #2a2a2a;
+  --white: #ffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  overflow: hidden;
+}
+
+/***********************************************
+    NAV START
+***********************************************/
+nav {
+  /* border: 1px solid #000; */
+  background-color: white;
+  box-shadow: 0px 0px 10px 0.5px rgb(207, 207, 207);
+  width: 100%;
+  height: 120px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav-left {
+  /* border: 1px solid #000; */
+  width: 20%;
+  height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  /* border: 1px solid #000; */
+  width: 4.5vw;
+  margin-left: 34%;
+}
+
+.nav-right {
+  /* border: 1px solid #000; */
+  width: 80%;
+  height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-right ul {
+  /* border: 1px solid #000; */
+  width: 60%;
+  height: 100%;
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nav-right ul a {
+  /* border: 1px solid #000; */
+  color: var(--gray);
+  padding: 10px 0px;
+  font-weight: 500;
+  font-size: 1.3vw;
+  border-radius: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.nav-right ul > li > i {
+  /* border: 1px solid #000; */
+  color: var(--gray);
+  padding: 10px 0px;
+  font-size: 1.3vw;
+  border-radius: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.nav-right ul a:hover {
+  color: var(--light-orange);
+}
+
+.nav-right ul > li > i:hover {
+  color: var(--light-orange);
+}
+
+.nav-right ul .active {
+  color: var(--light-orange);
+  position: relative;
+}
+
+.nav-right ul .active::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 70%;
+  height: 2px;
+  background-color: var(--light-orange);
+}
+
+.nav-right .button {
+  background-color: var(--orange);
+  font-size: 1.2vw;
+  padding: 10px 30px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.nav-right .button:hover {
+  background-color: var(--blue);
+}
+
+/***********************************************
+    NAV END
+***********************************************/
+
+/***********************************************
+    PRODUCT SECTION START
+***********************************************/
+
+#products-section {
+  /* border: 1px solid #000; */
+  height: 100vh;
+  width: 100%;
+  padding-top: 9%;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#filter {
+  /* border: 1px solid #000; */
+  width: 20%;
+  height: 100%;
+  overflow-y: scroll;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+#filter h1 {
+  font-size: 2vw;
+  font-weight: 500;
+  color: var(--orange);
+  padding-left: 5px;
+}
+
+#filter .filter-box {
+  /* border: 1px solid #000; */
+  width: 100%;
+  height: 100%;
+  padding-left: 5px;
+}
+
+.filter-box h4 {
+  font-size: 1.5vw;
+  font-weight: 500;
+  color: var(--orange);
+}
+
+.checkbox-div {
+  /* border: 1px solid #000; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.checkbox-div input {
+  margin: 0px 20px;
+  user-select: none;
+}
+
+.checkbox-div label {
+  color: var(--gray);
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-div input:checked {
+  accent-color: var(--orange);
+
+  user-select: none;
+}
+
+.checkbox-div input:checked ~ label {
+  color: var(--orange);
+  user-select: none;
+}
+
+.collection-div {
+  /* border: 1px solid #000; */
+  width: 80%;
+  height: 100%;
+  overflow-y: scroll;
+  padding-top: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.collection-div .card {
+  border: 1px solid var(--orange);
+  width: 480px;
+  height: 360px;
+  display: flex;
+  margin-bottom: 30px;
+  transition: 0.6s;
+}
+
+.collection-div .card:hover {
+  box-shadow: 0px 0px 10px 1px gray;
+}
+
+.card .card-left {
+  /* border: 1px solid #000; */
+  width: 50%;
+  height: 100%;
+}
+
+.card .card-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .card-right {
+  /* border: 1px solid #000; */
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+.card .card-right h3 {
+  text-align: center;
+  font-weight: 500;
+  color: var(--orange);
+  padding: 10px;
+}
+
+.card .card-right div {
+  /* border: 1px solid #000; */
+  height: 38px;
+  width: 100%;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card .card-right div span {
+  /* border: 1px solid #000; */
+  color: var(--gray);
+  font-size: 12px;
+}
+
+.card-right div span select {
+  /* border: 1px solid #000; */
+  outline: orange;
+  border: none;
+  border-radius: none;
+  background-color: white;
+  padding: 5px;
+  width: 80px;
+  font-size: 12px;
+}
+
+#photo-change-btn {
+  /* border: 1px solid #000; */
+  width: 100%;
+  padding: 15px 20px;
+}
+
+#photo-change-btn a {
+  /* border: 1px solid #000; */
+  font-size: 25px;
+  width: 50px;
+  border-radius: 10px;
+  color: var(--orange);
+  transition: 0.6s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#add-cart-btn {
+  /* border: 1px solid #000; */
+  width: 100%;
+  height: 40px;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#add-cart-btn a {
+  /* border: 1px solid #000; */
+  background-color: var(--light-orange);
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  color: white;
+  transition: 0.6s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#add-cart-btn:hover a {
+  /* border: 1px solid #000; */
+  background-color: var(--orange);
+}
+
+/***********************************************
+    PRODUCT SECTION END
+***********************************************/
+
+/***********************************************
+    CART SECTION START
+***********************************************/
+.cart-container {
+  /* border: 1px solid #000; */
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  left: 100%;
+  z-index: 1;
+  transition: 0.7s;
+}
+
+.fa-regular {
+  /* border: 1px solid #000; */
+  font-size: 2.5vw;
+  color: white;
+  position: absolute;
+  right: 3%;
+  top: 2.5%;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.cart-container h1 {
+  /* border: 1px solid #000; */
+  background-color: var(--light-orange);
+  font-size: 3vw;
+  font-weight: 500;
+  padding-left: 10%;
+  color: white;
+  height: 10%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.cart-container .cart-main-div {
+  /* border: 1px solid #000; */
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.cart-main-div .cart-header {
+  /* border: 1px solid #000; */
+  background-color: var(--light-orange);
+  width: 80%;
+  height: 40px;
+  margin-top: 2%;
+
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.cart-header div {
+  /* border: 1px solid #000; */
+  width: calc(100% / 6);
+  font-size: 1.5vw;
+  font-weight: 300;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-main-div .cart {
+  /* border: 1px solid #000; */
+  /* border-bottom: 1px solid rgb(170, 170, 170); */
+  width: 80%;
+  height: 70px;
+  margin-top: 1%;
+
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.cart-main-div .cart div {
+  /* border: 1px solid #000; */
+  width: calc(100% / 6);
+  font-size: 1.1vw;
+  font-weight: 300;
+  color: var(--gray);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-main-div .cart div i {
+  cursor: pointer;
+  color: var(--gray);
+}
+
+.cart-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/***********************************************
+    CART SECTION END
+***********************************************/
