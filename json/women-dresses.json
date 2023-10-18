@@ -13,14 +13,12 @@
             "productSize": [
                 "S",
                 "M",
-                "L",
-                "XL"
+                "L"
             ],
             "productColor": [
-                "Red",
-                "Green",
-                "Blue",
-                "Yellow"
+                "Orange",
+                "Yellow",
+                "Blue"
             ],
             "productPrice": "PKR.4000",
             "productDiscount": "20% OFF",
@@ -47,9 +45,9 @@
                 "XL"
             ],
             "productColor": [
-                "Red",
-                "Green",
-                "Blue",
+                "Camel",
+                "Violet",
+                "Pink",
                 "Yellow"
             ],
             "productPrice": "PKR.4000",
@@ -76,10 +74,10 @@
                 "XL"
             ],
             "productColor": [
-                "Red",
-                "Green",
-                "Blue",
-                "Yellow"
+                "Purple",
+                "Black",
+                "Mehroon",
+                "Green"
             ],
             "productPrice": "PKR.4000",
             "productDiscount": "20% OFF",

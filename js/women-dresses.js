@@ -30,15 +30,13 @@ fetch(api)
    .then((jsonData) => {
       let products = jsonData.description;
 
-      
-
       products.forEach((data)=>{
-         cardContainer.append(card_Func(data.images[1], data.productName, data.productCode, data.productSize, data.productColor[0], data.productDiscount, data.productSellingPrice));
+         cardContainer.append(card_Func(data.images[1], data.productName, data.productCode, data.productSize, data.productColor, data.productPrice, data.productDiscount, data.productSellingPrice));
       })
    })
 
 
-function card_Func(images, productName, productCode, productSize, productColor, productPrice, productDiscount, productSellingPrice){
+function card_Func(images, productName, productCode, productSizes, productColors, productPrice, productDiscount, productSellingPrice){
   let card = document.createElement("div");
   card.className = "card";
   card.innerHTML = `
@@ -50,10 +48,7 @@ function card_Func(images, productName, productCode, productSize, productColor, 
               <span>Size :</span
               ><span
                 ><select name="" id="size">
-                <option value="${productSize}">${productSize}</option>
-                <option value="Medium">M</option>
-                <option value="Large">L</option>
-                <option value="Extra Large">XL</option>
+                ${productSizes.map(size => `<option value="${size}">${size}</option>`)}
                 </select></span
               >
             </div>
@@ -61,10 +56,7 @@ function card_Func(images, productName, productCode, productSize, productColor, 
               <span>Color :</span
               ><span
                 ><select name="" id="">
-                  <option value="${productColor}">${productColor}</option>
-                  <option value="Blue">Blue</option>
-                  <option value="Green">Green</option>
-                  <option value="Orange">Orange</option>
+                ${productColors.map(color => `<option value="${color}">${color}</option>`)}
                 </select></span
               >
             </div>
