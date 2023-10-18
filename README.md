@@ -1,5 +1,5 @@
 # ROYAL THREAD
 
-<h1>AUTHOR: HAMZA KHAN LODHI<h1>
-
-https://hamzalodhi2023.github.io/royal-thread-new/
+<h2>AUTHOR: HAMZA KHAN LODHI</h2>
+  
+Click Here To Visit The Site: https://hamzalodhi2023.github.io/royal-thread-new/
