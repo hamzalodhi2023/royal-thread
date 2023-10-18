@@ -31,7 +31,7 @@ fetch(api)
       let products = jsonData.description;
 
       products.forEach((data)=>{
-         cardContainer.append(card_Func(data.images[1], data.productName, data.productCode, data.productSize, data.productColor, data.productPrice, data.productDiscount, data.productSellingPrice));
+         cardContainer.append(card_Func(data.images[0], data.productName, data.productCode, data.productSize, data.productColor, data.productPrice, data.productDiscount, data.productSellingPrice));
       })
    })
 
