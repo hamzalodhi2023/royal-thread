@@ -310,7 +310,7 @@ nav {
 }
 
 #shop h1 {
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   padding: 50px 0px;
   text-align: center;
   font-size: 3vw;
