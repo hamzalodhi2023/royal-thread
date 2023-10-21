@@ -33,7 +33,7 @@ fetch(api)
     products.forEach((data) => {
       cardContainer.append(
         card_Func(
-          data.images[0],
+          data.images,
           data.productName,
           data.productCode,
           data.productSize,
@@ -59,7 +59,9 @@ function card_Func(
   let card = document.createElement("div");
   card.className = "card";
   card.innerHTML = `
-          <div class="card-left"><img src="${images}" alt="" /></div>
+          <div class="card-left">${images.map(
+            (image) => `<img src="${image}" >`
+          )}</div>
           <div class="card-right">
             <h3>${productName}</h3>
             <div><span>Product Code :</span><span>${productCode}</span></div>
