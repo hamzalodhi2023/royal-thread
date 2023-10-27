@@ -407,7 +407,7 @@ nav {
 #about::after {
   /* border: 1px solid #000; */
   content: "";
-  background-image: url(../images/about-us-left.png);
+  background-image: url(../images/about-us-left.webp);
   background-position: left;
   background-size: contain;
   background-repeat: no-repeat;
@@ -421,7 +421,7 @@ nav {
 #about::before {
   /* border: 1px solid #000; */
   content: "";
-  background-image: url(../images/about-us-right.png);
+  background-image: url(../images/about-us-right.webp);
   background-position: right;
   background-size: contain;
   background-repeat: no-repeat;
