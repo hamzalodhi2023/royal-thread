@@ -217,7 +217,7 @@ nav {
   height: 500px;
   z-index: -10;
 
-  background-image: url(../images/baner-dec-left.png);
+  background-image: url(../images/baner-dec-left.webp);
   background-position: left;
   background-size: contain;
   background-repeat: no-repeat;
@@ -233,7 +233,7 @@ nav {
   height: 500px;
   z-index: -10;
 
-  background-image: url(../images/header-right-clip.png);
+  background-image: url(../images/header-right-clip.webp);
   background-position: right;
   background-size: contain;
   background-repeat: no-repeat;
