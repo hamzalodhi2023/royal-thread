@@ -460,3 +460,45 @@ nav {
 /***********************************************
     ABOUT US SECTION END
 ***********************************************/
+
+/***********************************************
+    FOOTER SECTION START
+***********************************************/
+#footer {
+  /* border: 1px solid #000; */
+  min-height: 40vh;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+#footer::after {
+  content: "";
+  /* border: 1px solid #f00; */
+  background-image: url(../images/footer-dec.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -99;
+}
+
+#footer img {
+  /* border: 1px solid #000; */
+  width: 5vw;
+  text-align: center;
+}
+
+#footer p {
+  /* border: 1px solid #000; */
+  text-align: center;
+}
+/***********************************************
+    FOOTER SECTION END
+***********************************************/
