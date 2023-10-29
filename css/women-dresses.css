@@ -38,23 +38,15 @@ a {
   text-decoration: none;
 }
 
-body {
-  overflow: hidden;
-}
-
 /***********************************************
     NAV START
 ***********************************************/
 nav {
   /* border: 1px solid #000; */
   background-color: white;
-  box-shadow: 0px 0px 10px 0.5px rgb(207, 207, 207);
+  /* box-shadow: 0px 0px 10px 0.5px rgb(207, 207, 207); */
   width: 100%;
   height: 120px;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 1;
 
   display: flex;
   align-items: center;
@@ -168,13 +160,10 @@ nav {
 ***********************************************/
 
 #products-section {
-  /* border: 1px solid #000; */
+  /* border: 1px solid #f00; */
   height: 100vh;
   width: 100%;
-  padding-top: 9%;
-  position: fixed;
-  top: 0;
-  left: 0;
+  /* padding-top: 9%; */
 
   display: flex;
   align-items: center;
@@ -247,7 +236,7 @@ nav {
   width: 80%;
   height: 100%;
   overflow-y: scroll;
-  padding-top: 30px;
+  padding: 10px;
 
   display: flex;
   align-items: center;
@@ -381,114 +370,13 @@ nav {
 ***********************************************/
 
 /***********************************************
-    CART SECTION START
+    ORDER FORM SECTION END
 ***********************************************/
-.cart-container {
-  /* border: 1px solid #000; */
-  width: 100vw;
+#order-form {
+  border: 1px solid #00ff00;
+  width: 100%;
   height: 100vh;
-  background-color: rgb(255, 255, 255);
-  position: relative;
-  left: 100%;
-  z-index: 1;
-  transition: 0.7s;
 }
-
-.fa-regular {
-  /* border: 1px solid #000; */
-  font-size: 2.5vw;
-  color: white;
-  position: absolute;
-  right: 3%;
-  top: 2.5%;
-  cursor: pointer;
-  pointer-events: all;
-}
-
-.cart-container h1 {
-  /* border: 1px solid #000; */
-  background-color: var(--light-orange);
-  font-size: 3vw;
-  font-weight: 500;
-  padding-left: 10%;
-  color: white;
-  height: 10%;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.cart-container .cart-main-div {
-  /* border: 1px solid #000; */
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
-}
-
-.cart-main-div .cart-header {
-  /* border: 1px solid #000; */
-  background-color: var(--light-orange);
-  width: 80%;
-  height: 40px;
-  margin-top: 2%;
-
-  display: flex;
-  align-content: center;
-  justify-content: space-evenly;
-}
-
-.cart-header div {
-  /* border: 1px solid #000; */
-  width: calc(100% / 6);
-  font-size: 1.5vw;
-  font-weight: 300;
-  color: white;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cart-main-div .cart {
-  /* border: 1px solid #000; */
-  /* border-bottom: 1px solid rgb(170, 170, 170); */
-  width: 80%;
-  height: 70px;
-  margin-top: 1%;
-
-  display: flex;
-  align-content: center;
-  justify-content: space-evenly;
-}
-
-.cart-main-div .cart div {
-  /* border: 1px solid #000; */
-  width: calc(100% / 6);
-  font-size: 1.1vw;
-  font-weight: 300;
-  color: var(--gray);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cart-main-div .cart div i {
-  cursor: pointer;
-  color: var(--gray);
-}
-
-.cart-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
 /***********************************************
-    CART SECTION END
+    ORDER FORM SECTION END
 ***********************************************/
