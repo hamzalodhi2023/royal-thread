@@ -281,9 +281,9 @@ nav {
   height: 100%;
   object-fit: cover;
 
-  position: absolute;
-  top: 0;
-  left: 0;
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
 }
 
 .card .card-right {
