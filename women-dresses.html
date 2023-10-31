@@ -196,12 +196,7 @@
               <img src="images/women-dresses/product (1).jpg" alt="" />
             </div>
             <div id="add-cart-btn">
-              <a href=""
-                >ADD TO CART &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
-                  class="fa-solid fa-cart-shopping fa-bounce"
-                  style="font-size: 14px"
-                ></i
-              ></a>
+              <a href="">ORDER NOW</a>
             </div>
           </div>
         </div>
@@ -217,7 +212,101 @@
     <!----------------------------------------------------
          ORDER FORM START
     ------------------------------------------------------->
-    <section id="order-form"></section>
+    <section id="order-form">
+      <form id="form" action="POST" class="form-main-div">
+        <i class="fa-solid fa-xmark"></i>
+        <div class="form-left-div">
+          <h4>CUSTOMER'S ORDER DETAILS</h4>
+          <div class="form">
+            <label for="">ORDER NO :</label>
+            <input type="text" id="order-number" name="orderNumber" readonly />
+            <label for="">CUSTOMER NAME :</label>
+            <input
+              type="text"
+              id="customer-name"
+              name="customerName"
+              placeholder="CUSTOMER NAME..."
+              required
+            />
+
+            <label for="">EMAIL :</label>
+            <input
+              type="EMAIL"
+              id="customer-email"
+              name="customerEmail"
+              placeholder="EMAIL..."
+              required
+            />
+            <label for="">WHATSAPP NUMBER :</label>
+            <input
+              type="text"
+              id="customer-whatsapp"
+              name="customerWhatsapp"
+              placeholder="03001234567"
+              maxlength="11"
+              minlength="11"
+              required
+            />
+            <label for="">SHIPPING ADDRESS :</label>
+            <textarea
+              name="customerAddress"
+              id="customer-address"
+              cols="30"
+              rows="2"
+              required
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="form-right-div">
+          <h4>PRODUCT DETAILS</h4>
+          <div class="form">
+            <label for="">PRODUCT :</label>
+            <input type="text" id="product-name" name="productName" readonly />
+            <label for="">PRODUCT CODE :</label>
+            <input type="text" id="product-code" name="productCode" readonly />
+            <label for="">SIZE :</label>
+            <input type="text" id="product-size" name="productSize" readonly />
+            <label for="">COLOR :</label>
+            <input
+              type="text"
+              id="product-color"
+              name="productColor"
+              readonly
+            />
+            <label for="">SELLING PRICE (PKR) :</label>
+            <input
+              type="text"
+              id="current-price"
+              name="productCurrentPrice"
+              readonly
+            />
+            <label for="">QUANTITY :</label>
+            <input
+              type="number"
+              id="product-quantity"
+              name="productQuantity"
+              value="1"
+              min="1"
+              max="3"
+              placeholder="QUANTITY MIN 01 & MAX 03 PER ORDER"
+              required
+            />
+            <label for="">TOTAL AMOUNT (PKR) :</label>
+            <input
+              type="text"
+              id="product-grand-total"
+              name="productGrandTotal"
+              readonly
+            />
+            <div class="button-div">
+              <button class="cancel-button">CANCEL</button>
+              <button class="confirm-order-btn">CONFIRM ORDER</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
     <!----------------------------------------------------
          ORDER FORM END
     ------------------------------------------------------->
