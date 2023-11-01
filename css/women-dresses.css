@@ -287,6 +287,7 @@ nav {
   font-weight: 500;
   color: var(--orange);
   padding: 10px;
+  font-size: 15px;
 }
 
 .card .card-right div {
@@ -344,7 +345,7 @@ nav {
   right: 0;
 }
 
-#add-cart-btn a {
+#add-cart-btn span {
   /* border: 1px solid #000; */
   background-color: var(--light-orange);
   width: 100%;
@@ -392,7 +393,7 @@ nav {
   /* border: 1px solid #000; */
   width: 80%;
   min-height: 90vh;
-  background-color: rgba(255, 255, 255, 0.26);
+  background-color: rgba(255, 255, 255, 0.089);
   backdrop-filter: blur(50px);
 
   position: relative;
@@ -557,20 +558,36 @@ textarea {
   height: 90%;
 }
 
-.fade-in {
-  animation-name: fade-in;
-  animation-duration: 1s;
-  animation-direction: alternate;
-  animation-iteration-count: 1;
-}
+.popup-opening-animation{
 
-.fade-in2 {
-  animation-name: fade-in2;
-  animation-duration: 2s;
-  animation-direction: alternate;
+  animation-name: popup-opening-animation;
+  animation-duration: 0.7s;
+  animation-direction: inherit;
   animation-iteration-count: 1;
 }
 
 /***********************************************
-    ORDER FORM SECTION END
+ORDER FORM SECTION END
+***********************************************/
+
+/***********************************************
+ANIMATION SECTION END
+***********************************************/
+
+@keyframes popup-opening-animation {
+  
+  from{
+    width: 0%;
+    max-height:  0%;
+    margin-left: 50%;
+    margin-top: 50%;
+  }
+  to  {
+    width: 100%;
+    max-height: 100%;
+  }
+
+}
+/***********************************************
+ANIMATION SECTION END
 ***********************************************/
