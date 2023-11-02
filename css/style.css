@@ -619,6 +619,7 @@ form div button:hover {
 
 .footer-services {
   /* border: 1px solid #000; */
+  border-bottom: 2px solid var(--orange);
   width: 100%;
   min-height: 100px;
   padding: 10px;
@@ -691,6 +692,7 @@ form div button:hover {
 .copy-right::selection {
   background-color: var(--light-orange);
 }
+
 /***********************************************
     FOOTER SECTION END
 ***********************************************/
