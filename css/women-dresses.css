@@ -558,8 +558,7 @@ textarea {
   height: 90%;
 }
 
-.popup-opening-animation{
-
+.popup-opening-animation {
   animation-name: popup-opening-animation;
   animation-duration: 0.7s;
   animation-direction: inherit;
@@ -575,18 +574,16 @@ ANIMATION SECTION END
 ***********************************************/
 
 @keyframes popup-opening-animation {
-  
-  from{
+  from {
     width: 0%;
-    max-height:  0%;
+    max-height: 0%;
     margin-left: 50%;
     margin-top: 50%;
   }
-  to  {
+  to {
     width: 100%;
     max-height: 100%;
   }
-
 }
 /***********************************************
 ANIMATION SECTION END
