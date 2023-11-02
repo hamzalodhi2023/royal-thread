@@ -687,6 +687,10 @@ form div button:hover {
   align-items: center;
   justify-content: center;
 }
+
+.copy-right::selection {
+  background-color: var(--light-orange);
+}
 /***********************************************
     FOOTER SECTION END
 ***********************************************/
