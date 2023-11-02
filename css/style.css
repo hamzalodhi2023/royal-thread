@@ -596,16 +596,10 @@ form div button:hover {
 ***********************************************/
 #footer {
   /* border: 1px solid #f00; */
-  min-height: 50vh;
+  min-height: 60vh;
   width: 100%;
   position: relative;
-}
-
-#footer > p {
-  /* border: 1px solid #f00; */
-  text-align: center;
-  color: var(--orange);
-  padding: 10px;
+  background-color: var(--light-orange);
 }
 
 #footer::after {
@@ -623,23 +617,10 @@ form div button:hover {
   background-size: cover;
 }
 
-#footer .footer-image {
+.footer-services {
   /* border: 1px solid #000; */
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-image img {
-  /* border: 1px solid #000; */
-  width: 100px;
-}
-
-#footer .footer-services {
-  /* border: 1px solid #f00; */
   min-height: 100px;
-  width: 100%;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -648,64 +629,63 @@ form div button:hover {
 }
 
 .footer-services a {
-  /* border: 1px solid #000; */
-  padding: 5px 0px;
-  width: 200px;
-  margin: 10px;
-  text-align: center;
-  font-size: 1rem;
-  border-radius: 20px;
-  background-color: var(--orange);
   color: white;
-  transition: 0.6s;
+  margin: 10px 20px;
 }
 
-.footer-services a:hover {
-  background-color: var(--blue);
-}
-
-.help-line {
+#footer h1 {
   /* border: 1px solid #000; */
-  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 500;
+  padding: 20px 0px;
+}
+
+#footer p {
+  /* border: 1px solid #000; */
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  font-weight: 200;
+  width: 80%;
+  margin: 0px auto;
+}
+
+#footer .social-icons {
+  /* border: 1px solid #000; */
+  width: 300px;
   min-height: 50px;
-  color: var(--orange);
+  margin: 10px auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.social-icons i {
+  /* border: 1px solid #000; */
+  padding: 10px 10px;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.help-line a {
+.copy-right {
   /* border: 1px solid #000; */
-  color: var(--orange);
-  padding: 0px 10px;
-  transition: 0.6s;
-}
-
-.help-line a:hover {
-  /* border: 1px solid #000; */
-  color: var(--blue);
-}
-
-.email {
-  /* border: 1px solid #000; */
+  background-color: var(--orange);
   width: 100%;
   min-height: 50px;
-  color: var(--orange);
+  margin: 0px;
+  text-align: center;
+  color: white;
+
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.email a {
-  /* border: 1px solid #000; */
-  color: var(--orange);
-  padding: 0px 10px;
-  transition: 0.6s;
-}
-
-.email a:hover {
-  /* border: 1px solid #000; */
-  color: var(--blue);
 }
 /***********************************************
     FOOTER SECTION END
