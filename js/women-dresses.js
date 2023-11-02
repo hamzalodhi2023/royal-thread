@@ -104,7 +104,7 @@ productsCards.forEach(currentCard => {
   const formProductSellingPrice = document.querySelector("#selling-price");
   const formProductQuantity = document.querySelector("#product-quantity");
   const formProductTotalAmount = document.querySelector("#product-grand-total");
-  
+
   const formCustomerOrderNumber = document.querySelector("#order-number");
 
   const currentCardOrderBtn = currentCard.querySelector(".order-now-btn");
@@ -112,7 +112,7 @@ productsCards.forEach(currentCard => {
   const currentCardProductCode = currentCard.querySelector("#product-card-code");
   const currentCardProductSize = currentCard.querySelector("#size");
   const currentCardProductColor = currentCard.querySelector("#color");
-  
+
   let creatingOrderNo = "WC-" + Math.floor(Math.random() * 10000);
 
   currentCardOrderBtn.addEventListener('click', function () {
@@ -147,13 +147,42 @@ productsCards.forEach(currentCard => {
     /*----------------------------
     form grand total logic ended
     ----------------------------*/
-
-
   })
+})
+/*----------------------------
+form product details logic ended
+----------------------------*/
+
+/*----------------------------
+form Sending Order Data Logic started
+----------------------------*/
+
+const form = document.querySelector("#form");
+
+const url = "https://script.google.com/macros/s/AKfycbz41tHMJrYs5O65ndjhx9U9MvOE7Id0lnI2Nnzg5BBkl8935iwETBHKRYaKnfc8Uhie/exec";
+
+
+form.addEventListener('submit', (e) => {
+  
+  let d = new FormData(form);
+
+  fetch(url, {
+    method: 'POST',
+    body: d,
+  }).then(res => {
+
+     return res.text();
+
+    }).then(finalRes => {
+
+      console.log(finalRes);
+
+    })
+    e.preventDefault();
 
 })
 
 /*----------------------------
-form product details logic ended
+form Sending Order Data Logic ended
 ----------------------------*/
 
