@@ -53,7 +53,6 @@ OrderButton.forEach(btn => {
 form popup opening logic ended
 ----------------------------*/
 
-
 /*----------------------------
 form popup closing logic started
 ----------------------------*/
@@ -73,14 +72,28 @@ form popup closing logic ended
 form popup ended
 ----------------------------*/
 
+const formCustomerOrderNumber = document.querySelector("#order-number");
+const formCustomerName = document.querySelector("#customer-name");
+const formCustomerEmail = document.querySelector("#customer-email");
+const formCustomerWhatsapp = document.querySelector("#customer-whatsapp");
+const formCustomerAddress = document.querySelector("#customer-address");
+
+const formProductName = document.querySelector("#product-name");
+const formProductCode = document.querySelector("#product-code");
+const formProductSize = document.querySelector("#product-size");
+const formProductColor = document.querySelector("#product-color");
+const formProductSellingPrice = document.querySelector("#selling-price");
+const formProductQuantity = document.querySelector("#product-quantity");
+const formProductTotalAmount = document.querySelector("#product-grand-total");
+
+const productsCards = document.querySelectorAll(".card");
+
 /*----------------------------
 form product details logic started
 ----------------------------*/
-const productsCards = document.querySelectorAll(".card");
-
 
 productsCards.forEach(currentCard => {
-
+  
   /*----------------------------
   product discount logic started
   ----------------------------*/
@@ -97,15 +110,8 @@ productsCards.forEach(currentCard => {
   product discount logic ended
   ----------------------------*/
 
-  const formProductName = document.querySelector("#product-name");
-  const formProductCode = document.querySelector("#product-code");
-  const formProductSize = document.querySelector("#product-size");
-  const formProductColor = document.querySelector("#product-color");
-  const formProductSellingPrice = document.querySelector("#selling-price");
-  const formProductQuantity = document.querySelector("#product-quantity");
-  const formProductTotalAmount = document.querySelector("#product-grand-total");
 
-  const formCustomerOrderNumber = document.querySelector("#order-number");
+
 
   const currentCardOrderBtn = currentCard.querySelector(".order-now-btn");
   const currentCardProductName = currentCard.querySelector(".card-right h3");
@@ -113,7 +119,7 @@ productsCards.forEach(currentCard => {
   const currentCardProductSize = currentCard.querySelector("#size");
   const currentCardProductColor = currentCard.querySelector("#color");
 
-  let creatingOrderNo = "WC-" + Math.floor(Math.random() * 10000);
+  let creatingOrderNo = "WPC-" + Math.floor(Math.random() * 10000);
 
   currentCardOrderBtn.addEventListener('click', function () {
 
@@ -159,11 +165,16 @@ form Sending Order Data Logic started
 
 const form = document.querySelector("#form");
 
-const url = "https://script.google.com/macros/s/AKfycbz41tHMJrYs5O65ndjhx9U9MvOE7Id0lnI2Nnzg5BBkl8935iwETBHKRYaKnfc8Uhie/exec";
+  /*----------------------------
+  form data google sheet logic started
+  ----------------------------*/
 
+const url = "https://script.google.com/macros/s/AKfycbz41tHMJrYs5O65ndjhx9U9MvOE7Id0lnI2Nnzg5BBkl8935iwETBHKRYaKnfc8Uhie/exec";
 
 form.addEventListener('submit', (e) => {
   
+  e.preventDefault();
+
   let d = new FormData(form);
 
   fetch(url, {
@@ -171,16 +182,111 @@ form.addEventListener('submit', (e) => {
     body: d,
   }).then(res => {
 
-     return res.text();
+    return res.text();
 
-    }).then(finalRes => {
+  }).then(finalRes => {
 
-      console.log(finalRes);
+    console.log(finalRes);
 
-    })
-    e.preventDefault();
+  })
 
-})
+  /*----------------------------
+  form data google sheet logic ended
+  ----------------------------*/
+
+  /*----------------------------
+  form data whatsapp logic started
+  ----------------------------*/
+  
+  let whatsappUrl =
+      "https://wa.me/923350020257?text=" + 
+       "_*ROYAL THREAD*_" + "%0a"+"%0a" +
+       "*CUSTOMER DETAILS*" + "%0a"+"%0a" +
+       "*Name* : " + formCustomerName.value +  "%0a" +
+       "*Email* : " + formCustomerEmail.value + "%0a" +
+       "*WhatsApp* : " + formCustomerWhatsapp.value +  "%0a" +
+       "*Shipping Address* : " + formCustomerAddress.value +  "%0a" +"%0a" +
+       "*PRODUCT DETAILS*" + "%0a"+"%0a" +
+       "*Order Number* : " + formCustomerOrderNumber.value + "%0a" +
+       "*Name* : " + formProductName.value +  "%0a" +
+       "*Code* : " + formProductCode.value +  "%0a" +
+       "*Size* : " + formProductSize.value +  "%0a" +
+       "*Color* : " + formProductColor.value +  "%0a" +
+       "*Price* : " + `PKR. ${formProductSellingPrice.value}` +  "%0a" +
+       "*Quantity* : " + formProductQuantity.value +  "%0a" +
+       "*Total Amount* : " + `PKR. ${formProductTotalAmount.value}` +  "%0a"+"%0a" +
+       "*Thank You For Choosing Royal Thread, Where Elegance Meets Style.*"
+  
+       window.open(whatsappUrl, "_blank");
+  
+  /*----------------------------
+  form data whatsapp logic ended
+  ----------------------------*/
+  /*----------------------------
+  form data email logic started
+  ----------------------------*/
+
+  let emailBody =
+    "<b>CUSTOMER DETAILS</b>" +
+    "<br>" +
+    "<br>" +
+    "<b>Name: </b>" +
+    formCustomerName.value +
+    "<br>" +
+    "<b>Email: </b>" +
+    formCustomerEmail.value +
+    "<br>" +
+    "<b>WhatsApp: </b>" +
+    formCustomerWhatsapp.value+
+    "<br>" +
+    "<b>Shipping Address: </b>" +
+    formCustomerAddress.value +
+    "<br>" +
+    "<br>" +
+    "<b>ORDER DETAILS</b>" +
+    "<br>" +
+    "<br>" +
+    "<b>Order Number: </b>" +
+    formCustomerOrderNumber.value +
+    "<br>" +
+    "<b>Name: </b>" +
+    formProductName.value +
+    "<br>" +
+    "<b>Code: </b>" +
+    formProductCode.value +
+    "<br>" +
+    "<b>Size: </b>" +
+    formProductSize.value +
+    "<br>" +
+    "<b>Color: </b>" +
+    formProductColor.value +
+    "<br>" +
+    "<b>Price: </b>PKR. " +
+    formProductSellingPrice.value +
+    "<br>" +
+    "<b>Quantity: </b>" +
+    formProductQuantity.value +
+    "<br>" +
+    "<b>Total Amount: </b>PKR. " +
+    formProductTotalAmount.value +
+    "<br>" +
+    "<br>" +
+    "<b>Thank you for choosing Royal Thread, where elegance meets style.</b>";
+
+  Email.send({
+    Host: "smtp.elasticemail.com",
+    Username: "hafsalodhi2023@gmail.com",
+    Password: "CBDA46B74169BB40DA5B3E4FDF0527EEDC5B",
+    To: formCustomerEmail.value,
+    From: "hafsalodhi2023@gmail.com",
+    Subject: "ORDER RECEIPT",
+    Body: emailBody
+  })
+  });
+
+  /*----------------------------
+  form data email logic ended
+  ----------------------------*/
 
 /*----------------------------
 form Sending Order Data Logic ended
