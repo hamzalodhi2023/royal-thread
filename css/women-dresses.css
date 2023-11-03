@@ -315,6 +315,7 @@ nav {
   padding: 5px;
   width: 80px;
   font-size: 12px;
+  cursor: pointer;
 }
 
 #photo-change {
@@ -333,6 +334,7 @@ nav {
   height: 100%;
   object-fit: cover;
   cursor: pointer;
+  user-select: none;
 }
 
 #add-cart-btn {
@@ -343,6 +345,7 @@ nav {
   position: absolute;
   bottom: 0;
   right: 0;
+  cursor: pointer;
 }
 
 #add-cart-btn span {
