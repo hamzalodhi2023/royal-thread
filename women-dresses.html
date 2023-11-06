@@ -91,66 +91,38 @@
     <section id="products-section">
       <div id="filter">
         <h1>WOMEN DRESSES</h1>
-        <div class="filter-box">
-          <h4>STUFF TYPE</h4>
-          <div class="checkbox-div">
-            <input class="stuffType" type="checkbox" checked />
-            <label for="check">ALL</label>
-          </div>
-          <div class="checkbox-div">
-            <input class="stuffType" type="checkbox" />
-            <label for="check">LILON</label>
-          </div>
-          <div class="checkbox-div">
-            <input class="stuffType" type="checkbox" />
-            <label for="check">LAWN</label>
-          </div>
-          <div class="checkbox-div">
-            <input class="stuffType" type="checkbox" />
-            <label for="check">COTTON</label>
-          </div>
-          <div class="checkbox-div">
-            <input class="stuffType" type="checkbox" />
-            <label for="check">SILK</label>
-          </div>
-          <div class="checkbox-div">
-            <input class="stuffType" type="checkbox" />
-            <label for="check">MIXED</label>
-          </div>
-          <h4>MADE TYPE</h4>
-          <div class="checkbox-div">
-            <input type="checkbox" checked />
-            <label for="check">ALL</label>
-          </div>
-          <div class="checkbox-div">
-            <input type="checkbox" />
-            <label for="check">STICHED</label>
-          </div>
-          <div class="checkbox-div">
-            <input type="checkbox" />
-            <label for="check">UN-STICHED</label>
-          </div>
-          <h4>CATEGORY OF DRESSES</h4>
-          <div class="checkbox-div">
-            <input type="checkbox" checked />
-            <label for="check">ALL</label>
-          </div>
-          <div class="checkbox-div">
-            <input type="checkbox" />
-            <label for="check">03 PIECE</label>
-          </div>
-          <div class="checkbox-div">
-            <input type="checkbox" />
-            <label for="check">02 PIECE</label>
-          </div>
-          <div class="checkbox-div">
-            <input type="checkbox" />
-            <label for="check">KURTI</label>
-          </div>
-          <div class="checkbox-div">
-            <input type="checkbox" />
-            <label for="check">BOTTOM</label>
-          </div>
+        <div class="stuff-type">
+          <h2>STUFF TYPE</h2>
+          <select name="" id="">
+            <option value="" selected>ALL</option>
+            <option value="">LILON</option>
+            <option value="">COTTON</option>
+            <option value="">LAWN</option>
+            <option value="">SILK</option>
+            <option value="">MIXED</option>
+          </select>
+        </div>
+        <div class="made-type">
+          <h2>MADE TYPE</h2>
+          <select name="" id="">
+            <option value="" selected>ALL</option>
+            <option value="">STICHED</option>
+            <option value="">UN-STICHED</option>
+          </select>
+        </div>
+        <div class="dress-type">
+          <h2>CATEGORY OF DRESSES</h2>
+          <select name="" id="">
+            <option value="" selected>ALL</option>
+            <option value="">02 PIECE</option>
+            <option value="">03 PIECE</option>
+            <option value="">KURTI</option>
+            <option value="">BOTTOM</option>
+          </select>
+        </div>
+        <div class="button">
+          <button>CLEAR</button>
+          <button>APPLY</button>
         </div>
       </div>
       <div class="collection-div">
@@ -398,7 +370,6 @@
               readonly
             />
             <div class="button-div">
-              <button class="cancel-button">CANCEL</button>
               <button class="confirm-order-btn">CONFIRM ORDER</button>
             </div>
           </div>

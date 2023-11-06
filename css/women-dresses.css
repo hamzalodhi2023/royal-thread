@@ -189,46 +189,61 @@ nav {
   padding-left: 5px;
 }
 
-#filter .filter-box {
-  /* border: 1px solid #000; */
-  width: 100%;
-  height: 100%;
-  padding-left: 5px;
-}
-
-.filter-box h4 {
-  font-size: 1.5vw;
+#filter h2 {
+  font-size: 1.6vw;
   font-weight: 500;
   color: var(--orange);
+  padding-left: 10px;
 }
 
-.checkbox-div {
+#filter .stuff-type,
+#filter .made-type,
+#filter .dress-type {
   /* border: 1px solid #000; */
+  width: 100%;
+  height: 20%;
+}
+
+#filter .button {
+  /* border: 1px solid #000; */
+  width: 100%;
+  height: 10%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
-.checkbox-div input {
-  margin: 0px 20px;
-  user-select: none;
-}
-
-.checkbox-div label {
-  color: var(--gray);
+#filter .button button {
+  /* border: 1px solid #000; */
+  background-color: var(--orange);
+  color: white;
+  border: none;
+  outline: none;
+  padding: 10px 30px;
+  border-radius: 20px;
+  transition: 0.6s;
   cursor: pointer;
-  user-select: none;
 }
 
-.checkbox-div input:checked {
-  accent-color: var(--orange);
-
-  user-select: none;
+#filter .button button:hover {
+  background-color: var(--blue);
 }
 
-.checkbox-div input:checked ~ label {
+.stuff-type select,
+.made-type select,
+.dress-type select {
+  border: 1px solid var(--orange);
+  background-color: white;
   color: var(--orange);
-  user-select: none;
+  width: 80%;
+  /* border: none; */
+  outline: none;
+  border-radius: 10px;
+  margin: 10px auto;
+  padding: 5px 20px;
+  font-size: 15px;
+  display: block;
 }
 
 .collection-div {
@@ -517,7 +532,7 @@ textarea {
 
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .form-right-div .form .button-div button {
@@ -528,31 +543,15 @@ textarea {
 }
 
 .form-right-div .form .button-div button:nth-child(1) {
-  border: 2px solid var(--blue);
-  background-color: var(--blue);
+  border: none;
+  background-color: var(--orange);
   color: white;
   transition: 0.6s;
   outline: none;
 }
 
 .form-right-div .form .button-div button:nth-child(1):hover {
-  border: 2px solid white;
-  background-color: transparent;
-  color: white;
-}
-
-.form-right-div .form .button-div button:nth-child(2) {
-  background-color: var(--orange);
-  border: none;
-  color: white;
-  outline: none;
-  transition: 0.6s;
-}
-
-.form-right-div .form .button-div button:nth-child(2):hover {
   background-color: var(--blue);
-  color: white;
-  outline: none;
 }
 
 .form-right-div .form {
