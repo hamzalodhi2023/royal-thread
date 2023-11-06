@@ -18,15 +18,61 @@ smallImages.forEach(smallImage => {
 /*----------------------------
 small images slider ended
 ----------------------------*/
-
 /*----------------------------
 filter logic started
 ----------------------------*/
+const stuffType = document.querySelector("#stuff-type");
+const madeType = document.querySelector("#made-type");
+const dressType = document.querySelector("#dress-type");
+
+const applyBtn = document.querySelector(".applyBtn");
+const clearBtn = document.querySelector(".clearBtn");
+
+applyBtn.addEventListener('click', function () {
+
+  
+  for (let product = 0; product < productsCards.length; product++) {
+    
+    const productName = productsCards[product].querySelector(".product-name");
+    
+    shouldDisplay = true;
+
+    if (
+      stuffType.value !== "ALL" && productName.textContent.includes(stuffType.value) === false
+    ) {
+
+      shouldDisplay = false;
+
+    }
+
+    if (
+      madeType.value !== "ALL" && productName.textContent.includes(madeType.value) === false
+    ) {
+
+      shouldDisplay = false;
+
+    }
+
+    if (
+      dressType.value !== "ALL" && productName.textContent.includes(dressType.value) === false
+    ) {
+
+      shouldDisplay = false;
+
+    }
+
+    productsCards[product].style.display = shouldDisplay ? "flex" : "none";
+
+  }
+})
+
+clearBtn.addEventListener('click', function(){
+  window.location.reload();
+})
 
 /*----------------------------
 filter logic ended
 ----------------------------*/
-
 /*----------------------------
 form popup started
 ----------------------------*/
@@ -93,7 +139,7 @@ form product details logic started
 ----------------------------*/
 
 productsCards.forEach(currentCard => {
-  
+
   /*----------------------------
   product discount logic started
   ----------------------------*/
@@ -165,14 +211,14 @@ form Sending Order Data Logic started
 
 const form = document.querySelector("#form");
 
-  /*----------------------------
-  form data google sheet logic started
-  ----------------------------*/
+/*----------------------------
+form data google sheet logic started
+----------------------------*/
 
 const url = "https://script.google.com/macros/s/AKfycbz41tHMJrYs5O65ndjhx9U9MvOE7Id0lnI2Nnzg5BBkl8935iwETBHKRYaKnfc8Uhie/exec";
 
 form.addEventListener('submit', (e) => {
-  
+
   e.preventDefault();
 
   let d = new FormData(form);
@@ -197,28 +243,28 @@ form.addEventListener('submit', (e) => {
   /*----------------------------
   form data whatsapp logic started
   ----------------------------*/
-  
+
   let whatsappUrl =
-      "https://wa.me/923350020257?text=" + 
-       "_*ROYAL THREAD*_" + "%0a"+"%0a" +
-       "*CUSTOMER DETAILS*" + "%0a"+"%0a" +
-       "*Name* : " + formCustomerName.value +  "%0a" +
-       "*Email* : " + formCustomerEmail.value + "%0a" +
-       "*WhatsApp* : " + formCustomerWhatsapp.value +  "%0a" +
-       "*Shipping Address* : " + formCustomerAddress.value +  "%0a" +"%0a" +
-       "*PRODUCT DETAILS*" + "%0a"+"%0a" +
-       "*Order Number* : " + formCustomerOrderNumber.value + "%0a" +
-       "*Name* : " + formProductName.value +  "%0a" +
-       "*Code* : " + formProductCode.value +  "%0a" +
-       "*Size* : " + formProductSize.value +  "%0a" +
-       "*Color* : " + formProductColor.value +  "%0a" +
-       "*Price* : " + `PKR. ${formProductSellingPrice.value}` +  "%0a" +
-       "*Quantity* : " + formProductQuantity.value +  "%0a" +
-       "*Total Amount* : " + `PKR. ${formProductTotalAmount.value}` +  "%0a"+"%0a" +
-       "*Thank You For Choosing Royal Thread, Where Elegance Meets Style.*"
-  
-       window.open(whatsappUrl, "_blank");
-  
+    "https://wa.me/923350020257?text=" +
+    "_*ROYAL THREAD*_" + "%0a" + "%0a" +
+    "*CUSTOMER DETAILS*" + "%0a" + "%0a" +
+    "*Name* : " + formCustomerName.value + "%0a" +
+    "*Email* : " + formCustomerEmail.value + "%0a" +
+    "*WhatsApp* : " + formCustomerWhatsapp.value + "%0a" +
+    "*Shipping Address* : " + formCustomerAddress.value + "%0a" + "%0a" +
+    "*PRODUCT DETAILS*" + "%0a" + "%0a" +
+    "*Order Number* : " + formCustomerOrderNumber.value + "%0a" +
+    "*Name* : " + formProductName.value + "%0a" +
+    "*Code* : " + formProductCode.value + "%0a" +
+    "*Size* : " + formProductSize.value + "%0a" +
+    "*Color* : " + formProductColor.value + "%0a" +
+    "*Price* : " + `PKR. ${formProductSellingPrice.value}` + "%0a" +
+    "*Quantity* : " + formProductQuantity.value + "%0a" +
+    "*Total Amount* : " + `PKR. ${formProductTotalAmount.value}` + "%0a" + "%0a" +
+    "*Thank You For Choosing Royal Thread, Where Elegance Meets Style.*"
+
+  window.open(whatsappUrl, "_blank");
+
   /*----------------------------
   form data whatsapp logic ended
   ----------------------------*/
@@ -237,7 +283,7 @@ form.addEventListener('submit', (e) => {
     formCustomerEmail.value +
     "<br>" +
     "<b>WhatsApp: </b>" +
-    formCustomerWhatsapp.value+
+    formCustomerWhatsapp.value +
     "<br>" +
     "<b>Shipping Address: </b>" +
     formCustomerAddress.value +
@@ -282,11 +328,11 @@ form.addEventListener('submit', (e) => {
     Subject: "ORDER RECEIPT",
     Body: emailBody
   })
-  });
+});
 
-  /*----------------------------
-  form data email logic ended
-  ----------------------------*/
+/*----------------------------
+form data email logic ended
+----------------------------*/
 
 /*----------------------------
 form Sending Order Data Logic ended
