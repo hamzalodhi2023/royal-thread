@@ -338,3 +338,49 @@ form data email logic ended
 form Sending Order Data Logic ended
 ----------------------------*/
 
+/*----------------------------
+Image zoom effects started
+----------------------------*/
+
+
+const cardsLeftDiv = document.querySelectorAll('.card-left');
+
+cardsLeftDiv.forEach(function(item) {
+  let zoomedDiv = item.nextElementSibling.children[0];
+  let zoomedImg = zoomedDiv.querySelector("img");
+  let cardsLeftDivImg = item.querySelector("img");
+
+  zoomedDiv.style.display = "none";
+  zoomedImg.src = cardsLeftDivImg.src;
+
+  item.addEventListener('mousemove', function(event) {
+    zoomedImg.src = cardsLeftDivImg.src; // Use the correct image source
+
+    zoomedDiv.style.display = "block";
+    const containerRect = item.getBoundingClientRect();
+    const clientX = event.clientX - containerRect.left;
+    const clientY = event.clientY - containerRect.top;
+
+    const translateX = ((clientX / containerRect.width) * 100) - 50;
+    const translateY = ((clientY / containerRect.height) * 100) - 50;
+
+    // Calculate the zoomed image position
+    const zoomedX = -translateX * 2;
+    const zoomedY = -translateY * 2;
+
+    // Update the zoomed image position
+    zoomedImg.style.transform = `translate(${zoomedX}%, ${zoomedY}%) scale(3)`;
+  });
+
+  item.addEventListener('mouseleave', function() {
+    zoomedImg.style.transform = 'translate(0%, 0%) scale(1)';
+    zoomedDiv.style.display = "none";
+  });
+});
+
+
+
+/*----------------------------
+ Image zoom effects ended
+----------------------------*/ 
+
