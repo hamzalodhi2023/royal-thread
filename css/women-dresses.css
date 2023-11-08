@@ -571,6 +571,58 @@ textarea {
 ORDER FORM SECTION END
 ***********************************************/
 
+#modal-box {
+  /* border: 1px solid #000; */
+  background-color: white;
+  width: 400px;
+  height: 240px;
+  margin: 50px auto;
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  z-index: 999;
+  padding-top: 30px;
+
+  display: none;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+#modal-box .fa-check {
+  /* border: 1px solid #000; */
+  background-color: green;
+  color: white;
+  padding: 20px;
+  font-size: 2.5rem;
+  border-radius: 50%;
+}
+
+#modal-box p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: green;
+}
+
+#modal-box button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: none;
+  border-radius: none;
+  background-color: green;
+  color: white;
+  width: 100%;
+  padding: 6px 0px;
+  font-size: 1rem;
+}
+/***********************************************
+MODAL BOX SECTION START
+***********************************************/
+/***********************************************
+MODAL BOX SECTION END
+***********************************************/
+
 /***********************************************
 ANIMATION SECTION END
 ***********************************************/
