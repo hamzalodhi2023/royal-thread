@@ -605,8 +605,10 @@ MODAL BOX SECTION START
   position: absolute;
   top: 25%;
   left: 35%;
-  z-index: 999;
+  z-index: 9999999;
   padding-top: 30px;
+  pointer-events: all;
+  box-shadow: 0px 0px 10px 1px var(--gray);
 
   display: none;
   align-items: center;
@@ -637,6 +639,7 @@ MODAL BOX SECTION START
   border-radius: none;
   background-color: green;
   color: white;
+  cursor: pointer;
   width: 100%;
   padding: 6px 0px;
   font-size: 1rem;

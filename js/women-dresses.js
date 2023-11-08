@@ -217,6 +217,14 @@ form data google sheet logic started
 
 const url = "https://script.google.com/macros/s/AKfycbz41tHMJrYs5O65ndjhx9U9MvOE7Id0lnI2Nnzg5BBkl8935iwETBHKRYaKnfc8Uhie/exec";
 
+const successModal = document.querySelector("#modal-box");
+const body = document.body;
+
+successModal.querySelector("button").onclick = () => {
+  successModal.style.display = "none";
+  body.style.pointerEvents = "all";
+}
+
 form.addEventListener('submit', (e) => {
 
   e.preventDefault();
@@ -231,10 +239,16 @@ form.addEventListener('submit', (e) => {
     return res.text();
 
   }).then(finalRes => {
-
-    console.log(finalRes);
-
+    
+    setTimeout(function(){
+      form.reset();
+      popup.style.display = "none";
+      body.style.pointerEvents = "none";
+      successModal.style.display = "flex";
+    }, 4000);
+    
   })
+
 
   /*----------------------------
   form data google sheet logic ended

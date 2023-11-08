@@ -80,21 +80,39 @@ const url = "https://script.google.com/macros/s/AKfycbyQrbby_ckmmnIJYOHW8Yu1jIHl
 
 let form = document.querySelector("form");
 
-form.addEventListener("submit", function(e){
-    console.log(e);
-    
+
+const successModal = document.querySelector("#modal-box");
+const body = document.body;
+
+successModal.querySelector("button").onclick = () => {
+    successModal.style.display = "none";
+}
+
+form.addEventListener('submit', (e) => {
+
     e.preventDefault();
 
     let d = new FormData(form);
 
     fetch(url, {
-        method: "POST",
+        method: 'POST',
         body: d,
     }).then(res => {
-        return res.text();
-    }).then(finalRes => {
-        console.log(finalRes);
-        form.reset();
-    });
-})
 
+        return res.text();
+
+    }).then(finalRes => {
+
+        //     setTimeout(function(){
+        //       form.reset();
+        //       popup.style.display = "none";
+        //       body.style.pointerEvents = "none";
+        //       successModal.style.display = "flex";
+        //     }, 4000);
+
+
+        //         setInterval(function(){
+        //           body.style.pointerEvents = "all";
+        //         },100);
+    })  
+})
