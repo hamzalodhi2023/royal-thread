@@ -299,7 +299,7 @@ nav {
   position: relative;
 }
 
-#zoomedDiv{
+#zoomedDiv {
   /* border: 1px solid #f00; */
   /* display: none; */
   overflow: hidden;
@@ -312,8 +312,7 @@ nav {
   z-index: 99;
 }
 
-
-#zoomedDiv img{
+#zoomedDiv img {
   /* border: 1px solid #f00; */
   object-fit: cover;
   width: 100%;
@@ -593,6 +592,9 @@ textarea {
 /***********************************************
 ORDER FORM SECTION END
 ***********************************************/
+/***********************************************
+MODAL BOX SECTION START
+***********************************************/
 
 #modal-box {
   /* border: 1px solid #000; */
@@ -639,9 +641,6 @@ ORDER FORM SECTION END
   padding: 6px 0px;
   font-size: 1rem;
 }
-/***********************************************
-MODAL BOX SECTION START
-***********************************************/
 /***********************************************
 MODAL BOX SECTION END
 ***********************************************/
