@@ -80,20 +80,13 @@ const url = "https://script.google.com/macros/s/AKfycbyQrbby_ckmmnIJYOHW8Yu1jIHl
 
 let form = document.querySelector("form");
 
-
-const successModal = document.querySelector("#modal-box");
-const body = document.body;
-
-successModal.querySelector("button").onclick = () => {
-    successModal.style.display = "none";
-}
-
 form.addEventListener('submit', (e) => {
-
+    
     e.preventDefault();
-
+    e.target.btn.innerText = "DATA SUBMITTING...";
+    
     let d = new FormData(form);
-
+    
     fetch(url, {
         method: 'POST',
         body: d,
@@ -102,17 +95,13 @@ form.addEventListener('submit', (e) => {
         return res.text();
 
     }).then(finalRes => {
+        
+        form.reset();
+        e.target.btn.innerText = "SUBSCRIBED SUCCESSFULLY !!!";
 
-        //     setTimeout(function(){
-        //       form.reset();
-        //       popup.style.display = "none";
-        //       body.style.pointerEvents = "none";
-        //       successModal.style.display = "flex";
-        //     }, 4000);
+        setTimeout(function(){
+            e.target.btn.innerText = "SUBSCRIBE";
+        }, 3000)
 
-
-        //         setInterval(function(){
-        //           body.style.pointerEvents = "all";
-        //         },100);
     })  
 })
