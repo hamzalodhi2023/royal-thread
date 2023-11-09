@@ -34,6 +34,7 @@
   
   --gray: #2a2a2a;
   --white: #ffff;
+  --privacy: #ff8a6721;
 }
 
 a {
@@ -274,7 +275,7 @@ HEADER SECTION START
 
 #policy h1 {
   /* border: 1px solid #000; */
-  padding-bottom: 50px;
+  padding: 50px 0px;
   text-align: center;
   font-size: 3vw;
   color: var(--orange);
@@ -296,7 +297,7 @@ HEADER SECTION START
   width: 284px;
   height: 100px;
   margin-bottom: 10px;
-  background-color: #ff8a6721;
+  background-color: var(--privacy);
 
   display: flex;
   align-items: center;
@@ -855,13 +856,21 @@ form div button:hover {
   }
 
   #shop h1 {
+    /* border: 1px solid #000; */
+    text-align: center;
     font-size: 8vw;
+    color: var(--orange);
+    padding-bottom: 20px;
+    padding-top: 0px;
   }
 
   #about h1 {
     /* border: 1px solid #000; */
-
+    padding: 0px 0px;
+    text-align: center;
     font-size: 8vw;
+    color: var(--orange);
+    margin-top: 10px;
   }
 
   #about h3 {
