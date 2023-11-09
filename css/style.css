@@ -33,6 +33,7 @@
   --light-orange: #ff8b67;
   --gray: #2a2a2a;
   --white: #ffff;
+  --privacy: #ff8a6721;
 }
 
 a {
@@ -289,7 +290,7 @@ HEADER SECTION START
   width: 284px;
   height: 100px;
   margin-bottom: 10px;
-  background-color: #ff8a6721;
+  background-color: var(--privacy);
 
   display: flex;
   align-items: center;
