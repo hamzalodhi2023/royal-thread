@@ -361,6 +361,7 @@ HEADER SECTION START
   font-size: 40px;
   font-weight: 400;
   margin-top: 25%;
+  text-align: center;
 }
 
 .shop-card a {
