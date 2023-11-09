@@ -75,7 +75,9 @@ typeWriter();
 /*----------------------------
 typing effects started
 ----------------------------*/
-
+/*----------------------------
+subscription form logic started
+----------------------------*/
 const url = "https://script.google.com/macros/s/AKfycbyQrbby_ckmmnIJYOHW8Yu1jIHlS0dF8tz9GtcsbCGj7Opp32OpzvP-7sx2iubnHony/exec"
 
 let form = document.querySelector("form");
@@ -105,3 +107,34 @@ form.addEventListener('submit', (e) => {
 
     })  
 })
+/*----------------------------
+subscription form logic ended
+----------------------------*/
+/*----------------------------
+hamburger logic started
+----------------------------*/
+let hamburgerContainer = document.querySelector(".hamburger-container");
+let hamburgerIcon = document.querySelector(".fa-bars");
+
+hamburgerIcon.addEventListener("click", function(){
+    hamburgerContainer.style.left = "0%"
+})
+
+let crossIcon = document.querySelector(".fa-circle-xmark");
+
+crossIcon.addEventListener("click", function(){
+    hamburgerContainer.style.left = "100%";
+})
+
+let hamburgerMenus = document.querySelectorAll(".hamburger-container ul li a");
+
+hamburgerMenus.forEach((menu)=>{
+    
+    menu.addEventListener('click', function(){
+        hamburgerContainer.style.left = "100%"
+    })
+    
+})
+/*----------------------------
+hamburger logic ended
+----------------------------*/

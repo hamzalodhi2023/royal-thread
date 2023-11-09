@@ -31,6 +31,7 @@
   --blue: #03a4ed;
   --orange: #ff695f;
   --light-orange: #ff8b67;
+  
   --gray: #2a2a2a;
   --white: #ffff;
 }
@@ -42,6 +43,11 @@ a {
 /***********************************************
     NAV START
 ***********************************************/
+
+.hamburger-container{
+  display: none;
+}
+
 #nav {
   /* border: 1px solid #000; */
   background-color: white;
@@ -51,7 +57,7 @@ a {
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 99;
+  z-index: 1;
 
   display: flex;
   align-items: center;
@@ -148,10 +154,11 @@ a {
   visibility: hidden;
   right: 10px;
   top: 10px;
-  z-index: 99;
+  z-index: 1;
   font-size: 2rem;
   color: var(--orange);
   padding: 10px;
+  cursor: pointer;
 }
 /***********************************************
 NAV END
@@ -727,6 +734,61 @@ form div button:hover {
   .fa-bars {
     visibility: visible;
   }
+
+
+  .hamburger-container{
+    /* border: 1px solid #000; */
+    background-color: rgba(255, 255, 255, 0.849);
+    position: fixed;
+    display: block;
+    left: 100%;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+    transition: 0.6s;
+  }
+  
+  .hamburger-container i {
+    /* border: 1px solid #000; */
+    font-size: 35px;
+    position: absolute;
+    color: var(--orange);
+    right: 30px;
+    top: 25px;
+    cursor: pointer;
+    transition: 0.6s;
+  }
+  
+  .hamburger-container i:hover{
+    color: var(--blue);
+  }
+  
+  .hamburger-container ul{
+    /* border: 1px solid #000; */
+    list-style: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  
+  .hamburger-container ul li a{
+    /* border: 1px solid #000; */
+    font-size: 25px;
+    color: var(--orange);
+    font-weight: 500;
+    transition: 0.6s;
+  }
+  
+  .hamburger-container ul li a:hover{
+    color: var(--blue);
+  }
+  
+
   #nav {
     display: none;
   }
