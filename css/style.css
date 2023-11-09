@@ -148,6 +148,7 @@ a {
 .fa-bars {
   /* border: 1px solid #000; */
   position: absolute;
+  visibility: hidden;
   right: 10px;
   top: 10px;
   z-index: 99;
@@ -236,8 +237,8 @@ HEADER SECTION START
 
 #header .button {
   background-color: var(--orange);
-  font-size: 1.2vw;
-  padding: 10px 30px;
+  padding: 8px 30px;
+  font-size: 15px;
   outline: none;
   border: none;
   margin-left: 16%;
@@ -368,8 +369,8 @@ HEADER SECTION START
   /* border: 1px solid #000; */
   background-color: var(--orange);
   border-radius: 50px;
-  padding: 8px 30px;
   margin-top: 20px;
+  padding: 8px 30px;
   font-size: 15px;
   color: white;
   transition: 0.6s;
@@ -644,8 +645,16 @@ form div button:hover {
 }
 
 .footer-services a {
+  /* border: 1px solid #000; */
   color: white;
-  margin: 10px 20px;
+  width: 200px;
+  text-align: center;
+  margin: 8px;
+  transition: 0.6s;
+}
+
+.footer-services a:hover {
+  color: #525252;
 }
 
 #footer h1 {
@@ -687,6 +696,11 @@ form div button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.6s;
+}
+
+.social-icons i:hover {
+  color: #525252;
 }
 
 .copy-right {
@@ -711,6 +725,9 @@ form div button:hover {
     FOOTER SECTION END
 ***********************************************/
 @media only screen and (max-width: 780px) and (min-width: 320px) {
+  .fa-bars {
+    visibility: visible;
+  }
   #nav {
     display: none;
   }
@@ -719,12 +736,17 @@ form div button:hover {
     /* border: 1px solid #000; */
     width: 100%;
     position: relative;
-    min-height: 80vh;
+    min-height: 50vh;
 
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+  }
+
+  #header img {
+    width: 30vw;
+    margin: 10px auto;
   }
 
   #header::after {
