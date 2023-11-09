@@ -31,7 +31,7 @@
   --blue: #03a4ed;
   --orange: #ff695f;
   --light-orange: #ff8b67;
-  
+
   --gray: #2a2a2a;
   --white: #ffff;
   --privacy: #ff8a6721;
@@ -44,8 +44,17 @@ a {
 /***********************************************
     NAV START
 ***********************************************/
+.fa-circle-up {
+  /* border: 1px solid #000; */
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  font-size: 3rem;
+  color: var(--blue);
+  z-index: 5;
+}
 
-.hamburger-container{
+.hamburger-container {
   display: none;
 }
 
@@ -151,7 +160,7 @@ a {
 
 .fa-bars {
   /* border: 1px solid #000; */
-  position: absolute;
+  position: fixed;
   visibility: hidden;
   right: 10px;
   top: 10px;
@@ -736,10 +745,9 @@ form div button:hover {
     visibility: visible;
   }
 
-
-  .hamburger-container{
+  .hamburger-container {
     /* border: 1px solid #000; */
-    background-color: rgba(255, 255, 255, 0.849);
+    background-color: rgba(0, 0, 0, 0.705);
     position: fixed;
     display: block;
     left: 100%;
@@ -747,10 +755,10 @@ form div button:hover {
     height: 100vh;
     width: 100%;
     z-index: 2;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     transition: 0.6s;
   }
-  
+
   .hamburger-container i {
     /* border: 1px solid #000; */
     font-size: 35px;
@@ -761,12 +769,12 @@ form div button:hover {
     cursor: pointer;
     transition: 0.6s;
   }
-  
-  .hamburger-container i:hover{
+
+  .hamburger-container i:hover {
     color: var(--blue);
   }
-  
-  .hamburger-container ul{
+
+  .hamburger-container ul {
     /* border: 1px solid #000; */
     list-style: none;
     height: 100%;
@@ -776,19 +784,18 @@ form div button:hover {
     justify-content: space-evenly;
     flex-direction: column;
   }
-  
-  .hamburger-container ul li a{
+
+  .hamburger-container ul li a {
     /* border: 1px solid #000; */
     font-size: 25px;
     color: var(--orange);
     font-weight: 500;
     transition: 0.6s;
   }
-  
-  .hamburger-container ul li a:hover{
+
+  .hamburger-container ul li a:hover {
     color: var(--blue);
   }
-  
 
   #nav {
     display: none;
