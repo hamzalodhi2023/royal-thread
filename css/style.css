@@ -718,7 +718,7 @@ form div button:hover {
     /* border: 1px solid #000; */
     width: 100%;
     position: relative;
-    min-height: 50vh;
+    min-height: 80vh;
 
     display: flex;
     align-items: center;
@@ -772,6 +772,14 @@ form div button:hover {
     color: var(--white);
     cursor: pointer;
     transition: 0.5s;
+  }
+
+  #policy h1 {
+    font-size: 8vw;
+  }
+
+  #shop h1 {
+    font-size: 8vw;
   }
 
   #about h1 {
