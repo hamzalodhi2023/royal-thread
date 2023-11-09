@@ -1,3 +1,6 @@
+@import "main-media-query.css" screen and (max-width: 650px) and
+  (min-width: 320px);
+
 * {
   padding: 0;
   margin: 0;
@@ -42,7 +45,7 @@ a {
 /***********************************************
     NAV START
 ***********************************************/
-nav {
+#nav {
   /* border: 1px solid #000; */
   background-color: white;
   box-shadow: 0px 0px 10px 0.5px rgb(207, 207, 207);
@@ -142,12 +145,22 @@ nav {
   background-color: var(--blue);
 }
 
+.fa-bars {
+  /* border: 1px solid #000; */
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 99;
+  font-size: 2rem;
+  color: var(--orange);
+  padding: 10px;
+}
 /***********************************************
-    NAV END
+NAV END
 ***********************************************/
 
 /***********************************************
-    HEADER SECTION START
+HEADER SECTION START
 ***********************************************/
 
 #header {
@@ -161,6 +174,38 @@ nav {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+}
+
+#header::after {
+  content: "";
+  /* border: 1px solid #000; */
+  position: absolute;
+  left: 0px;
+  top: 130px;
+  width: 40vw;
+  height: 500px;
+  z-index: -10;
+
+  background-image: url(../images/baner-dec-left.webp);
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#header::before {
+  content: "";
+  /* border: 1px solid #000; */
+  position: absolute;
+  right: 0px;
+  top: 120px;
+  width: 50vw;
+  height: 500px;
+  z-index: -10;
+
+  background-image: url(../images/header-right-clip.webp);
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #header h1 {
@@ -205,38 +250,6 @@ nav {
 
 #header .button:hover {
   background-color: var(--blue);
-}
-
-#header::after {
-  content: "";
-  /* border: 1px solid #000; */
-  position: absolute;
-  left: 0px;
-  top: 130px;
-  width: 40vw;
-  height: 500px;
-  z-index: -10;
-
-  background-image: url(../images/baner-dec-left.webp);
-  background-position: left;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-#header::before {
-  content: "";
-  /* border: 1px solid #000; */
-  position: absolute;
-  right: 0px;
-  top: 120px;
-  width: 50vw;
-  height: 500px;
-  z-index: -10;
-
-  background-image: url(../images/header-right-clip.webp);
-  background-position: right;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 /***********************************************
     HEADER SECTION START
@@ -696,3 +709,91 @@ form div button:hover {
 /***********************************************
     FOOTER SECTION END
 ***********************************************/
+@media only screen and (max-width: 780px) and (min-width: 320px) {
+  #nav {
+    display: none;
+  }
+
+  #header {
+    /* border: 1px solid #000; */
+    width: 100%;
+    position: relative;
+    min-height: 50vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #header::after {
+    display: none;
+  }
+
+  #header::before {
+    display: none;
+  }
+
+  #header h1 {
+    /* border: 1px solid #000; */
+    font-size: 10vw;
+    margin-left: 0%;
+    /* margin-top: 20%; */
+    color: var(--orange);
+  }
+
+  #header h3 {
+    /* border: 1px solid #000; */
+    padding-top: 20px;
+    font-size: 4vw;
+    margin-left: 0%;
+    /* margin-top: 20%; */
+    color: var(--orange);
+  }
+
+  #header p {
+    /* border: 1px solid #000; */
+    font-size: 3vw;
+    font-weight: 500;
+    margin-left: 0%;
+    color: var(--gray);
+    padding: 10px 0px;
+  }
+
+  #header .button {
+    background-color: var(--orange);
+    font-size: 2vw;
+    padding: 10px 30px;
+    outline: none;
+    border: none;
+    margin-left: 0%;
+    margin-top: 2%;
+    border-radius: 20px;
+    color: var(--white);
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  #about h1 {
+    /* border: 1px solid #000; */
+
+    font-size: 8vw;
+  }
+
+  #about h3 {
+    /* border: 1px solid #000; */
+    padding-top: 50px;
+    text-align: center;
+    font-size: 6vw;
+    color: var(--orange);
+  }
+
+  #about p {
+    /* border: 1px solid #000; */
+    font-weight: 200;
+    font-size: 15px;
+    width: 100%;
+    text-align: justify;
+    text-align-last: center;
+  }
+}
