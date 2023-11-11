@@ -11,7 +11,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 10;
   background-color: #ff8a677e;
   border-radius: 50px;
 }
@@ -165,9 +165,10 @@ nav {
 .fa-filter {
   display: none;
 }
+
 #products-section {
   /* border: 1px solid #f00; */
-  min-height: 90vh;
+  height: 100vh;
   width: 100%;
   /* padding-top: 9%; */
 
@@ -175,6 +176,7 @@ nav {
   align-items: center;
   justify-content: flex-start;
 }
+
 #filter .fa-circle-xmark {
   display: none;
 }
@@ -691,7 +693,6 @@ ANIMATION SECTION END
   }
 
   .responsive-header {
-    /* border: 1px solid #000; */
     height: 10vh;
     width: 100%;
 
@@ -729,7 +730,6 @@ ANIMATION SECTION END
   }
 
   #filter {
-    /* border: 1px solid #000; */
     background-color: rgba(0, 0, 0, 0.623);
     backdrop-filter: blur(10px);
     position: absolute;
@@ -744,7 +744,6 @@ ANIMATION SECTION END
   }
 
   #filter h1 {
-    /* border: 1px solid #000; */
     font-size: 6vw;
     font-weight: 500;
     color: var(--orange);
@@ -753,7 +752,6 @@ ANIMATION SECTION END
   }
 
   #filter h2 {
-    /* border: 1px solid #000; */
     font-size: 4vw;
     font-weight: 500;
     color: var(--orange);
@@ -774,7 +772,6 @@ ANIMATION SECTION END
   }
 
   .collection-div {
-    /* border: 1px solid #000; */
     width: 100%;
     height: 90vh;
   }
@@ -787,7 +784,6 @@ ANIMATION SECTION END
     user-select: none;
   }
 }
-
 @media only screen and (max-width: 440px) and (min-width: 320px) {
   #photo-change {
     display: flex;
@@ -803,18 +799,15 @@ ANIMATION SECTION END
   }
 
   .card .card-right div span {
-    /* border: 1px solid #000; */
     color: var(--gray);
     font-size: 10px;
   }
 
   .card .card-left {
-    /* border: 1px solid #000; */
     width: 60%;
   }
 
   .card .card-right {
-    /* border: 1px solid #000; */
     width: 40%;
   }
 
