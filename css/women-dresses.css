@@ -174,7 +174,6 @@ nav {
   /* border: 1px solid #000; */
   width: 20%;
   height: 100%;
-  overflow-y: scroll;
 
   display: flex;
   align-items: flex-start;
@@ -667,3 +666,49 @@ ANIMATION SECTION END
 /***********************************************
 ANIMATION SECTION END
 ***********************************************/
+@media only screen and (max-width: 780px) and (min-width: 320px) {
+  #filter {
+    /* border: 1px solid #000; */
+    background-color: rgba(0, 0, 0, 0.623);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  #filter h1 {
+    /* border: 1px solid #000; */
+    font-size: 6vw;
+    font-weight: 500;
+    color: var(--orange);
+    padding-left: 5px;
+    padding-bottom: 20px;
+  }
+
+  #filter h2 {
+    /* border: 1px solid #000; */
+    font-size: 4vw;
+    font-weight: 500;
+    color: var(--orange);
+    padding: 0px;
+    padding-left: 10%;
+  }
+
+  #filter .button button {
+    background-color: var(--orange);
+    font-size: 15px;
+    padding: 15px 60px;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    color: var(--white);
+    cursor: pointer;
+    transition: 0.5s;
+  }
+}
