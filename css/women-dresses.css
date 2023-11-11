@@ -160,10 +160,14 @@ nav {
 /***********************************************
     PRODUCT SECTION START
 ***********************************************/
-
+.responsive-header,
+.fa-bars-staggered,
+.fa-filter {
+  display: none;
+}
 #products-section {
   /* border: 1px solid #f00; */
-  height: 80vh;
+  min-height: 90vh;
   width: 100%;
   /* padding-top: 9%; */
 
@@ -669,9 +673,6 @@ ANIMATION SECTION END
 ANIMATION SECTION END
 ***********************************************/
 @media only screen and (max-width: 780px) and (min-width: 320px) {
-  nav {
-    display: none;
-  }
   .fa-circle-xmark {
     display: block;
     position: absolute;
@@ -685,6 +686,48 @@ ANIMATION SECTION END
   .fa-circle-xmark:hover {
     color: var(--blue);
   }
+  nav {
+    display: none;
+  }
+
+  .responsive-header {
+    /* border: 1px solid #000; */
+    height: 10vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .responsive-header h1 {
+    text-align: center;
+    font-weight: 600;
+    color: var(--orange);
+    font-size: 6vw;
+  }
+  .fa-bars-staggered,
+  .fa-filter {
+    display: block;
+    position: absolute;
+    font-size: 20px;
+    color: var(--orange);
+    cursor: pointer;
+    transition: 0.6s;
+  }
+  .fa-bars-staggered:hover,
+  .fa-filter:hover {
+    color: var(--blue);
+  }
+  .fa-bars-staggered {
+    top: 10px;
+    right: 10px;
+  }
+  .fa-filter {
+    top: 10px;
+    left: 10px;
+  }
+
   #filter {
     /* border: 1px solid #000; */
     background-color: rgba(0, 0, 0, 0.623);
@@ -731,9 +774,9 @@ ANIMATION SECTION END
   }
 
   .collection-div {
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     width: 100%;
-    height: 100vh;
+    height: 90vh;
   }
 
   #photo-change img {
