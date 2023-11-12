@@ -169,7 +169,7 @@ nav {
 
 #products-section {
   /* border: 1px solid #000; */
-  height: 100vh;
+  height: 81vh;
   width: 100%;
 
   display: flex;
@@ -678,9 +678,21 @@ ANIMATION SECTION END
     display: none;
   }
 
+  #products-section {
+    /* border: 1px solid #f00; */
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
   .responsive-header {
+    /* border: 1px solid #000; */
     height: 10vh;
     width: 100%;
+    position: static;
 
     display: flex;
     justify-content: center;
@@ -742,7 +754,7 @@ ANIMATION SECTION END
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    transition: 0.3s  ;
+    transition: 0.3s;
   }
 
   #filter h1 {
