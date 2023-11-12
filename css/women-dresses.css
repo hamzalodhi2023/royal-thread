@@ -734,13 +734,14 @@ ANIMATION SECTION END
     backdrop-filter: blur(10px);
     position: absolute;
     top: 0;
-    left: 0;
+    left: -100%;
     height: 100vh;
     width: 100%;
     z-index: 100;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: flex-start;
+    transition: 0.3s  ;
   }
 
   #filter h1 {

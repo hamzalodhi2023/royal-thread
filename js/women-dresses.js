@@ -356,7 +356,6 @@ form Sending Order Data Logic ended
 Image zoom effects started
 ----------------------------*/
 
-
 const cardsLeftDiv = document.querySelectorAll('.card-left');
 
 cardsLeftDiv.forEach(function(item) {
@@ -368,7 +367,7 @@ cardsLeftDiv.forEach(function(item) {
   zoomedImg.src = cardsLeftDivImg.src;
 
   item.addEventListener('mousemove', function(event) {
-    zoomedImg.src = cardsLeftDivImg.src; // Use the correct image source
+    zoomedImg.src = cardsLeftDivImg.src;
 
     zoomedDiv.style.display = "block";
     const containerRect = item.getBoundingClientRect();
@@ -378,11 +377,9 @@ cardsLeftDiv.forEach(function(item) {
     const translateX = ((clientX / containerRect.width) * 100) - 50;
     const translateY = ((clientY / containerRect.height) * 100) - 50;
 
-    // Calculate the zoomed image position
     const zoomedX = -translateX * 2;
     const zoomedY = -translateY * 2;
 
-    // Update the zoomed image position
     zoomedImg.style.transform = `translate(${zoomedX}%, ${zoomedY}%) scale(3)`;
   });
 
@@ -392,9 +389,24 @@ cardsLeftDiv.forEach(function(item) {
   });
 });
 
-
-
 /*----------------------------
  Image zoom effects ended
 ----------------------------*/ 
 
+/*----------------------------
+filter logic started
+-----------------------------*/
+let filterIcon = document.querySelector(".fa-filter");
+let filter = document.querySelector("#filter");
+let filterCrossIcon = document.querySelector("#filter .fa-xmark");
+
+filterIcon.addEventListener("click", function(){
+  filter.style.left = "0%";
+})
+
+filterCrossIcon.addEventListener("click", function(){
+  filter.style.left = "-100%";
+})
+/*----------------------------
+filter logic started
+-----------------------------*/

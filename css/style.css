@@ -158,7 +158,7 @@ a {
   background-color: var(--blue);
 }
 
-.fa-bars {
+.fa-bars-staggered {
   /* border: 1px solid #000; */
   position: fixed;
   visibility: hidden;
@@ -741,7 +741,8 @@ form div button:hover {
     FOOTER SECTION END
 ***********************************************/
 @media only screen and (max-width: 780px) and (min-width: 320px) {
-  .fa-bars {
+  .fa-bars-staggered
+   {
     visibility: visible;
   }
 

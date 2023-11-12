@@ -132,7 +132,7 @@ subscription form logic ended
 hamburger logic started
 ----------------------------*/
 let hamburgerContainer = document.querySelector(".hamburger-container");
-let hamburgerIcon = document.querySelector(".fa-bars");
+let hamburgerIcon = document.querySelector(".fa-bars-staggered");
 
 hamburgerIcon.addEventListener("click", function(){
     hamburgerContainer.style.left = "0%"
