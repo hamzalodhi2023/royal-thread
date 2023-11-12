@@ -399,6 +399,7 @@ filter logic started
 let filterIcon = document.querySelector(".fa-filter");
 let filter = document.querySelector("#filter");
 let filterCrossIcon = document.querySelector("#filter .fa-circle-xmark");
+let filterApply = document.querySelector(".applyBtn");
 
 filterIcon.addEventListener("click", function(){
   filter.style.left = "0%";
@@ -407,6 +408,38 @@ filterIcon.addEventListener("click", function(){
 filterCrossIcon.addEventListener("click", function(){
   filter.style.left = "-100%";
 })
+
+filterApply.addEventListener("click", function(){
+  filter.style.left = "-100%";
+})
 /*----------------------------
 filter logic started
 -----------------------------*/
+/*----------------------------
+hamburger logic started
+----------------------------*/
+let hamburgerContainer = document.querySelector(".hamburger-container");
+let hamburgerIcon = document.querySelector(".fa-bars-staggered");
+
+hamburgerIcon.addEventListener("click", function(){
+    hamburgerContainer.style.left = "0%"
+})
+
+let crossIcon = document.querySelector(".fa-circle-xmark");
+
+crossIcon.addEventListener("click", function(){
+    hamburgerContainer.style.left = "100%";
+})
+
+let hamburgerMenus = document.querySelectorAll(".hamburger-container ul li a");
+
+hamburgerMenus.forEach((menu)=>{
+    
+    menu.addEventListener('click', function(){
+        hamburgerContainer.style.left = "100%"
+    })
+    
+})
+/*----------------------------
+hamburger logic ended
+----------------------------*/  
