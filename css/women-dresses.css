@@ -45,7 +45,7 @@ a {
 /***********************************************
     NAV START
 ***********************************************/
-.hamburger-container{
+.hamburger-container {
   display: none;
 }
 
@@ -678,7 +678,6 @@ ANIMATION SECTION END
 ANIMATION SECTION END
 ***********************************************/
 @media only screen and (max-width: 780px) and (min-width: 320px) {
-
   .hamburger-container {
     /* border: 1px solid #000; */
     background-color: rgba(0, 0, 0, 0.705);
