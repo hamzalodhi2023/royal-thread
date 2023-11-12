@@ -398,7 +398,7 @@ filter logic started
 -----------------------------*/
 let filterIcon = document.querySelector(".fa-filter");
 let filter = document.querySelector("#filter");
-let filterCrossIcon = document.querySelector("#filter .fa-xmark");
+let filterCrossIcon = document.querySelector("#filter .fa-circle-xmark");
 
 filterIcon.addEventListener("click", function(){
   filter.style.left = "0%";
