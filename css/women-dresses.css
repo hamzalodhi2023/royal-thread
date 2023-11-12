@@ -180,7 +180,6 @@ nav {
 #filter .fa-circle-xmark {
   display: none;
 }
-
 #filter {
   /* border: 1px solid #000; */
   width: 20%;
@@ -675,19 +674,6 @@ ANIMATION SECTION END
 ANIMATION SECTION END
 ***********************************************/
 @media only screen and (max-width: 780px) and (min-width: 320px) {
-  .fa-circle-xmark {
-    display: block;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 2rem;
-    color: var(--orange);
-    transition: 0.6s;
-    cursor: pointer;
-  }
-  .fa-circle-xmark:hover {
-    color: var(--blue);
-  }
   nav {
     display: none;
   }
@@ -729,6 +715,21 @@ ANIMATION SECTION END
     left: 10px;
   }
 
+  #filter .fa-circle-xmark {
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 5vw;
+    color: var(--orange);
+    cursor: pointer;
+    transition: 0.6s;
+  }
+
+  #filter .fa-circle-xmark:hover {
+    color: var(--blue);
+  }
+
   #filter {
     background-color: rgba(0, 0, 0, 0.623);
     backdrop-filter: blur(10px);
@@ -738,7 +739,7 @@ ANIMATION SECTION END
     height: 100vh;
     width: 100%;
     z-index: 100;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: flex-start;
   }
