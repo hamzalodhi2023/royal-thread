@@ -498,13 +498,15 @@ HEADER SECTION START
 #subscription {
   /* border: 1px solid #000; */
   width: 100%;
-  min-height: 60vh;
+  min-height: 77vh;
   position: relative;
+  margin-bottom: 20px;
 
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 }
+
 #subscription::after {
   content: "";
   position: absolute;

@@ -775,7 +775,7 @@ ANIMATION SECTION END
   .fa-filter {
     display: block;
     position: absolute;
-    font-size: 20px;
+    font-size: 25px;
     color: var(--orange);
     cursor: pointer;
     transition: 0.6s;
@@ -786,11 +786,11 @@ ANIMATION SECTION END
   }
   .fa-bars-staggered {
     top: 10px;
-    right: 10px;
+    right: 20px;
   }
   .fa-filter {
     top: 10px;
-    left: 10px;
+    left: 20px;
   }
 
   #filter .fa-circle-xmark {
