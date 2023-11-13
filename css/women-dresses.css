@@ -622,7 +622,7 @@ MODAL BOX SECTION START
   pointer-events: all;
   box-shadow: 0px 0px 10px 1px var(--gray);
 
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
