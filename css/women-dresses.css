@@ -233,6 +233,7 @@ nav {
   color: white;
   border: none;
   outline: none;
+  margin: 10px;
   padding: 10px 30px;
   border-radius: 20px;
   transition: 0.6s;
