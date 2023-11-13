@@ -741,8 +741,7 @@ form div button:hover {
     FOOTER SECTION END
 ***********************************************/
 @media only screen and (max-width: 780px) and (min-width: 320px) {
-  .fa-bars-staggered
-   {
+  .fa-bars-staggered {
     visibility: visible;
   }
 
