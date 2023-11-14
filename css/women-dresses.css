@@ -858,6 +858,15 @@ ANIMATION SECTION END
     height: 100%;
   }
 
+  .card .card-right h3 {
+    /* border: 1px solid #000; */
+    text-align: center;
+    font-weight: 500;
+    color: var(--orange);
+    padding: 5px;
+    font-size: 12px;
+  }
+
   #photo-change img {
     height: 100%;
     width: calc(100% / 4);
