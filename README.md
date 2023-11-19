@@ -2,7 +2,7 @@
 
 ## AUTHOR: HAMZA KHAN LODHI
 
-### Click Here To Visit The Site: https://hamzalodhi2023.github.io/royal-thread/
+### Click Here To Visit The Site: https://royalthread.netlify.app/
 
 ![Royal Thread](images/Royalthread.png)
 ![Royal Thread](images/Royalthread2.png)
