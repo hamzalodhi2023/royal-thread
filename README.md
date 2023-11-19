@@ -14,8 +14,6 @@
 - **Beautiful Layout**
 - **Interactive Layout**
 
-## Getting Started
-
 ### To Buy Contact On
 
 #### E-mail
