@@ -29,5 +29,3 @@ lodhiumar2023@gmail.com
 ```
 03350020257
 ```
-
-Happy shopping with ROYAL THREAD!
